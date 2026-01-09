@@ -49,6 +49,7 @@ export function Header() {
               const getHref = () => {
                 if (item === "Home") return "/"
                 if (item === "About Us") return "/about"
+                if (item === "Service") return "/services"
                 if (item === "Contact Us") return "/contact"
                 return `/#${item.toLowerCase().replace(/\s+/g, "")}`
               }
@@ -117,6 +118,7 @@ export function Header() {
                   const getHref = () => {
                     if (item === "Home") return "/"
                     if (item === "About Us") return "/about"
+                    if (item === "Service") return "/services"
                     if (item === "Contact Us") return "/contact"
                     return `/#${item.toLowerCase().replace(/\s+/g, "")}`
                   }

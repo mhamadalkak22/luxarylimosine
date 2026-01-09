@@ -48,6 +48,7 @@ export function Footer() {
                 const getHref = () => {
                   if (link === "Home") return "/"
                   if (link === "About Us") return "/about"
+                  if (link === "Services") return "/services"
                   if (link === "Contact") return "/contact"
                   return `/#${link.toLowerCase().replace(/\s+/g, "")}`
                 }
