@@ -1,16 +1,31 @@
-"use client"
+"use client";
 
-import { Shield, Briefcase, Plane, MapPin, Crown, PartyPopper, Heart, Calendar, Phone, MessageCircle, ArrowRight, CheckCircle, Clock, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import {
+  Shield,
+  Briefcase,
+  Plane,
+  MapPin,
+  Crown,
+  PartyPopper,
+  Heart,
+  Calendar,
+  Phone,
+  MessageCircle,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Star,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export default function ServicesPage() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const services = [
     {
@@ -28,7 +43,8 @@ export default function ServicesPage() {
     {
       icon: Briefcase,
       title: "Corporate Travel",
-      description: "Reliable transportation for executives, meetings, and business events.",
+      description:
+        "Reliable transportation for executives, meetings, and business events.",
       features: [
         "Professional chauffeurs",
         "On-time guarantee",
@@ -40,7 +56,8 @@ export default function ServicesPage() {
     {
       icon: Plane,
       title: "Airport Transfer",
-      description: "Seamless, on-time pickups and drop-offs from O'Hare, Midway, and private terminals.",
+      description:
+        "Seamless, on-time pickups and drop-offs from O'Hare, Midway, and private terminals.",
       features: [
         "Flight tracking",
         "Meet & greet service",
@@ -52,7 +69,8 @@ export default function ServicesPage() {
     {
       icon: MapPin,
       title: "City Tours",
-      description: "Explore Chicago in comfort and style with a private chauffeur.",
+      description:
+        "Explore Chicago in comfort and style with a private chauffeur.",
       features: [
         "Custom tour routes",
         "Knowledgeable drivers",
@@ -64,7 +82,8 @@ export default function ServicesPage() {
     {
       icon: Crown,
       title: "VIP Service",
-      description: "White-glove transportation for high-profile clients and special occasions.",
+      description:
+        "White-glove transportation for high-profile clients and special occasions.",
       features: [
         "Premium luxury vehicles",
         "Personal concierge",
@@ -76,7 +95,8 @@ export default function ServicesPage() {
     {
       icon: PartyPopper,
       title: "Event Chauffeur",
-      description: "Limo and bus services for concerts, galas, sporting events, and more.",
+      description:
+        "Limo and bus services for concerts, galas, sporting events, and more.",
       features: [
         "Group transportation",
         "Event coordination",
@@ -88,7 +108,8 @@ export default function ServicesPage() {
     {
       icon: Heart,
       title: "Prom Limo Service",
-      description: "Arrive in luxury and style — a night to remember for prom-goers.",
+      description:
+        "Arrive in luxury and style — a night to remember for prom-goers.",
       features: [
         "Safe & supervised",
         "Photos & memories",
@@ -100,7 +121,8 @@ export default function ServicesPage() {
     {
       icon: Calendar,
       title: "Wedding Limo & Shuttle Service",
-      description: "Perfect for weddings, including bridal party transportation, guest shuttles, and elegant getaways for the newlyweds.",
+      description:
+        "Perfect for weddings, including bridal party transportation, guest shuttles, and elegant getaways for the newlyweds.",
       features: [
         "Bridal packages",
         "Guest shuttles",
@@ -109,14 +131,30 @@ export default function ServicesPage() {
       ],
       color: "from-rose-500 to-pink-500",
     },
-  ]
+  ];
 
   const benefits = [
-    { icon: Clock, title: "24/7 Availability", description: "Round-the-clock service for your convenience" },
-    { icon: Star, title: "Professional Drivers", description: "Licensed, experienced chauffeurs" },
-    { icon: Shield, title: "Fully Insured", description: "Complete coverage for peace of mind" },
-    { icon: CheckCircle, title: "On-Time Guarantee", description: "We value your time as much as you do" },
-  ]
+    {
+      icon: Clock,
+      title: "24/7 Availability",
+      description: "Round-the-clock service for your convenience",
+    },
+    {
+      icon: Star,
+      title: "Professional Drivers",
+      description: "Licensed, experienced chauffeurs",
+    },
+    {
+      icon: Shield,
+      title: "Fully Insured",
+      description: "Complete coverage for peace of mind",
+    },
+    {
+      icon: CheckCircle,
+      title: "On-Time Guarantee",
+      description: "We value your time as much as you do",
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-black">
@@ -187,7 +225,8 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-300 leading-relaxed mb-8"
             >
-              From airport transfers to weddings and corporate events — we deliver elegance, comfort, and punctuality for every occasion.
+              From airport transfers to weddings and corporate events — we
+              deliver elegance, comfort, and punctuality for every occasion.
             </motion.p>
 
             <motion.div
@@ -196,13 +235,26 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button asChild className="bg-[#FF4500] hover:bg-[#FF6347] text-white px-8 py-6 text-lg rounded-full">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  asChild
+                  className="bg-[#FF4500] hover:bg-[#FF6347] text-white px-8 py-6 text-lg rounded-full"
+                >
                   <a href="/contact">Book Now</a>
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button asChild variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full"
+                >
                   <a href="tel:+17084975200">Call Us</a>
                 </Button>
               </motion.div>
@@ -248,13 +300,14 @@ export default function ServicesPage() {
               Complete Transportation Solutions
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Choose from our diverse range of luxury transportation services tailored to your specific needs
+              Choose from our diverse range of luxury transportation services
+              tailored to your specific needs
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => {
-              const Icon = service.icon
+              const Icon = service.icon;
               return (
                 <motion.div
                   key={index}
@@ -265,8 +318,10 @@ export default function ServicesPage() {
                   className="bg-black border border-zinc-800 rounded-3xl p-8 hover:border-[#FF4500] transition-all group relative overflow-hidden"
                 >
                   {/* Gradient Background on Hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity`} />
-                  
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity`}
+                  />
+
                   {/* Icon */}
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
@@ -277,8 +332,12 @@ export default function ServicesPage() {
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold mb-4 relative z-10">{service.title}</h3>
-                  <p className="text-gray-400 leading-relaxed mb-6 relative z-10">{service.description}</p>
+                  <h3 className="text-xl font-bold mb-4 relative z-10">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed mb-6 relative z-10">
+                    {service.description}
+                  </p>
 
                   {/* Features */}
                   <ul className="space-y-2 mb-6 relative z-10">
@@ -287,7 +346,10 @@ export default function ServicesPage() {
                         key={idx}
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.4, delay: index * 0.1 + idx * 0.05 }}
+                        transition={{
+                          duration: 0.4,
+                          delay: index * 0.1 + idx * 0.05,
+                        }}
                         className="flex items-center gap-2 text-sm text-gray-500"
                       >
                         <CheckCircle className="h-4 w-4 text-[#FF4500] flex-shrink-0" />
@@ -302,14 +364,17 @@ export default function ServicesPage() {
                     whileTap={{ scale: 0.9 }}
                     className="relative z-10"
                   >
-                    <Button asChild className="w-12 h-12 bg-[#FF4500] hover:bg-[#FF6347] text-white rounded-full p-0 flex items-center justify-center">
-                      <a href="/contact">
+                    <Button
+                      asChild
+                      className="w-12 h-12 bg-[#FF4500] hover:bg-[#FF6347] text-white rounded-full p-0 flex items-center justify-center"
+                    >
+                      <a href="/fleet">
                         <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
                   </motion.div>
                 </motion.div>
-              )
+              );
             })}
           </div>
         </div>
@@ -359,7 +424,7 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {benefits.map((benefit, index) => {
-              const Icon = benefit.icon
+              const Icon = benefit.icon;
               return (
                 <motion.div
                   key={index}
@@ -380,7 +445,7 @@ export default function ServicesPage() {
                   <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                   <p className="text-gray-400">{benefit.description}</p>
                 </motion.div>
-              )
+              );
             })}
           </div>
         </div>
@@ -426,9 +491,22 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { step: "1", title: "Choose Your Service", description: "Select from our range of luxury transportation options" },
-              { step: "2", title: "Book & Confirm", description: "Contact us via phone, email, or our booking form" },
-              { step: "3", title: "Enjoy Your Ride", description: "Sit back and experience premium luxury service" },
+              {
+                step: "1",
+                title: "Choose Your Service",
+                description:
+                  "Select from our range of luxury transportation options",
+              },
+              {
+                step: "2",
+                title: "Book & Confirm",
+                description: "Contact us via phone, email, or our booking form",
+              },
+              {
+                step: "3",
+                title: "Enjoy Your Ride",
+                description: "Sit back and experience premium luxury service",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -449,7 +527,7 @@ export default function ServicesPage() {
                   <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                   <p className="text-gray-400">{item.description}</p>
                 </div>
-                
+
                 {/* Arrow */}
                 {index < 2 && (
                   <motion.div
@@ -503,7 +581,8 @@ export default function ServicesPage() {
                 <span className="text-[#FF4500]">Luxury Transportation?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-12">
-                Contact us today and let us take care of your transportation needs with style and professionalism
+                Contact us today and let us take care of your transportation
+                needs with style and professionalism
               </p>
 
               <motion.div
@@ -513,8 +592,14 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button asChild className="bg-[#FF4500] hover:bg-[#FF6347] text-white px-8 py-6 text-lg rounded-full flex items-center gap-2">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    asChild
+                    className="bg-[#FF4500] hover:bg-[#FF6347] text-white px-8 py-6 text-lg rounded-full flex items-center gap-2"
+                  >
                     <a href="/contact">
                       Book Now
                       <MessageCircle className="h-5 w-5" />
@@ -522,8 +607,15 @@ export default function ServicesPage() {
                   </Button>
                 </motion.div>
 
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button asChild variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full flex items-center gap-2">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full flex items-center gap-2"
+                  >
                     <a href="tel:+17084975200">
                       (+1) 708-497-5200
                       <Phone className="h-5 w-5" />
@@ -549,6 +641,5 @@ export default function ServicesPage() {
 
       <Footer />
     </main>
-  )
+  );
 }
-

@@ -1,0 +1,13 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0a0a0a"/>
+  <rect x="50" y="180" width="700" height="280" rx="25" fill="#1a1a1a"/>
+  <rect x="80" y="350" width="180" height="90" rx="12" fill="#2a2a2a"/>
+  <rect x="540" y="350" width="180" height="90" rx="12" fill="#2a2a2a"/>
+  <circle cx="140" cy="490" r="45" fill="#404040"/>
+  <circle cx="140" cy="490" r="28" fill="#1a1a1a"/>
+  <circle cx="660" cy="490" r="45" fill="#404040"/>
+  <circle cx="660" cy="490" r="28" fill="#1a1a1a"/>
+  <rect x="100" y="150" width="600" height="110" rx="18" fill="#0a0a0a"/>
+  <text x="400" y="110" font-family="Arial" font-size="28" fill="#FF4500" text-anchor="middle" font-weight="bold">FREIGHTLINER</text>
+  <text x="400" y="145" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Limo Style - 35-45 Seats</text>
+</svg>
