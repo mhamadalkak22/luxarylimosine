@@ -12,9 +12,12 @@ interface VehicleCardProps {
   modelYear: string
   seating: number | string
   index: number
+  slug?: string
 }
 
-export function VehicleCard({ name, type, image, modelYear, seating, index }: VehicleCardProps) {
+export function VehicleCard({ name, type, image, modelYear, seating, index, slug }: VehicleCardProps) {
+  // Generate slug from name if not provided
+  const vehicleSlug = slug || name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -75,7 +78,7 @@ export function VehicleCard({ name, type, image, modelYear, seating, index }: Ve
           </div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button asChild className="w-full bg-transparent border-2 border-white hover:bg-[#FF4500] hover:border-[#FF4500] text-white group/btn">
-              <a href="/contact">
+              <a href={`/fleet/${vehicleSlug}`}>
                 <span className="flex items-center justify-between w-full">
                   <span className="font-bold text-lg">GET A QUOTE</span>
                   <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />

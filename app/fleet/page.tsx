@@ -8,145 +8,20 @@ import { useInView } from "framer-motion";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { VehicleCard } from "@/components/vehicle-card";
+import { vehiclesData } from "@/lib/vehicles-data";
 
 export default function FleetPage() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const vehicles = [
-    // SUVs - 3 vehicles
-    {
-      name: "Lincoln Navigator",
-      type: "SUV" as const,
-      image: "/luxury-lincoln-navigator-black-suv.jpg",
-      modelYear: "New Model",
-      seating: 6,
-    },
-    {
-      name: "Cadillac Escalade",
-      type: "SUV" as const,
-      image: "/luxury-cadillac-escalade-black-suv.jpg",
-      modelYear: "2025",
-      seating: 6,
-    },
-    {
-      name: "Chevy Suburban",
-      type: "SUV" as const,
-      image: "/luxury-chevrolet-suburban-black-suv.jpg",
-      modelYear: "New Model",
-      seating: 6,
-    },
-    // Limousines - 3 vehicles (DIFFERENT IMAGES)
-    {
-      name: "Stretch Hummer",
-      type: "LIMO" as const,
-      image: "/stretch-hummer-limousine-black.jpg",
-      modelYear: "New Model",
-      seating: 18,
-    },
-    {
-      name: "Lincoln Navigator 16",
-      type: "LIMO" as const,
-      image: "/lincoln-navigator-stretch-limousine-black.jpg",
-      modelYear: "New Model",
-      seating: 16,
-    },
-    {
-      name: "Stretch MKT",
-      type: "LIMO" as const,
-      image: "/lincoln-mkt-stretch-limousine-black.jpg",
-      modelYear: "New Model",
-      seating: 10,
-    },
-    // Mercedes Sprinters - 3 vehicles (USING SPRINTER IMAGE)
-    {
-      name: "Mercedes – executive style",
-      type: "BUSS" as const,
-      image: "/luxury-mercedes-sprinter-executive-van-black.jpg",
-      modelYear: "New Model",
-      seating: 10,
-    },
-    {
-      name: "Mercedes – Limo Style",
-      type: "BUSS" as const,
-      image: "/luxury-mercedes-sprinter-executive-van-black.jpg",
-      modelYear: "New Model",
-      seating: 15,
-    },
-    {
-      name: "Mercedes Shuttle – style",
-      type: "BUSS" as const,
-      image: "/luxury-mercedes-sprinter-executive-van-black.jpg",
-      modelYear: "New Model",
-      seating: 15,
-    },
-    // Ford Party Buses - 3 vehicles
-    {
-      name: "22 FORD party BUS – Shuttle Style",
-      type: "BUSS" as const,
-      image: "/ford1.png",
-      modelYear: "New Model",
-      seating: 22,
-    },
-    {
-      name: "22 FORD party BUS – Limo Style",
-      type: "LIMO" as const,
-      image: "/ford1.png",
-      modelYear: "New Model",
-      seating: 22,
-    },
-    {
-      name: "FORD party BUS – Limo Style",
-      type: "BUSS" as const,
-      image: "/ford1.png",
-      modelYear: "New Model",
-      seating: 28,
-    },
-    // Mercedes Benz Freightliner - 3 vehicles
-    {
-      name: "Mercedes Benz Freightliner – Limo Style",
-      type: "BUSS" as const,
-      image: "/limo.png",
-      modelYear: "New Model",
-      seating: 28,
-    },
-    {
-      name: "Mercedes Benz Freightliner – Limo Style",
-      type: "BUSS" as const,
-      image: "/limo.png",
-      modelYear: "New Model",
-      seating: "35-45" as any,
-    },
-    {
-      name: "Mercedes Benz Freightliner -Shuttle Style",
-      type: "BUSS" as const,
-      image: "/limo.png",
-      modelYear: "New Model",
-      seating: "35-45" as any,
-    },
-    // Luxury Coach Buses - 3 vehicles
-    {
-      name: "Luxury Coach Bus",
-      type: "BUSS" as const,
-      image: "/bus.png",
-      modelYear: "New Model",
-      seating: "40-56" as any,
-    },
-    {
-      name: "Luxury Coach Bus",
-      type: "BUSS" as const,
-      image: "/bus1.png",
-      modelYear: "New Model",
-      seating: "40-56" as any,
-    },
-    {
-      name: "Luxury Coach Bus",
-      type: "BUSS" as const,
-      image: "/bus3.png",
-      modelYear: "New Model",
-      seating: "40-56" as any,
-    },
-  ];
+  const vehicles = vehiclesData.map((vehicle) => ({
+    name: vehicle.name,
+    type: vehicle.type,
+    image: vehicle.mainImage,
+    modelYear: vehicle.modelYear,
+    seating: vehicle.seating,
+    slug: vehicle.slug,
+  }));
 
   return (
     <main className="min-h-screen bg-black">
@@ -271,7 +146,7 @@ export default function FleetPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {vehicles.slice(0, 3).map((vehicle, index) => (
-                <VehicleCard key={index} {...vehicle} index={index} />
+                <VehicleCard key={vehicle.slug} {...vehicle} index={index} />
               ))}
             </div>
           </motion.div>
@@ -291,7 +166,11 @@ export default function FleetPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {vehicles.slice(3, 6).map((vehicle, index) => (
-                <VehicleCard key={index + 3} {...vehicle} index={index + 3} />
+                <VehicleCard
+                  key={vehicle.slug}
+                  {...vehicle}
+                  index={index + 3}
+                />
               ))}
             </div>
           </motion.div>
@@ -311,7 +190,11 @@ export default function FleetPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {vehicles.slice(6, 9).map((vehicle, index) => (
-                <VehicleCard key={index + 6} {...vehicle} index={index + 6} />
+                <VehicleCard
+                  key={vehicle.slug}
+                  {...vehicle}
+                  index={index + 6}
+                />
               ))}
             </div>
           </motion.div>
@@ -331,7 +214,11 @@ export default function FleetPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {vehicles.slice(9, 12).map((vehicle, index) => (
-                <VehicleCard key={index + 9} {...vehicle} index={index + 9} />
+                <VehicleCard
+                  key={vehicle.slug}
+                  {...vehicle}
+                  index={index + 9}
+                />
               ))}
             </div>
           </motion.div>
@@ -351,7 +238,11 @@ export default function FleetPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {vehicles.slice(12, 15).map((vehicle, index) => (
-                <VehicleCard key={index + 12} {...vehicle} index={index + 12} />
+                <VehicleCard
+                  key={vehicle.slug}
+                  {...vehicle}
+                  index={index + 12}
+                />
               ))}
             </div>
           </motion.div>
@@ -370,7 +261,11 @@ export default function FleetPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {vehicles.slice(15, 18).map((vehicle, index) => (
-                <VehicleCard key={index + 15} {...vehicle} index={index + 15} />
+                <VehicleCard
+                  key={vehicle.slug}
+                  {...vehicle}
+                  index={index + 15}
+                />
               ))}
             </div>
           </motion.div>

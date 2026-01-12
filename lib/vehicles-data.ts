@@ -1,0 +1,451 @@
+export interface VehicleDetails {
+  name: string;
+  slug: string;
+  type: "SUV" | "LIMO" | "BUSS";
+  modelYear: string;
+  seating: number | string;
+  mainImage: string;
+  images: string[];
+  wifi: boolean;
+  climateControl: string;
+  idealFor: string[];
+  features: string[];
+  description: string;
+  tagline: string;
+}
+
+export const vehiclesData: VehicleDetails[] = [
+  // SUVs - 3 vehicles
+  {
+    name: "Lincoln Navigator",
+    slug: "lincoln-navigator",
+    type: "SUV",
+    modelYear: "New Model",
+    seating: 6,
+    mainImage: "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
+    images: [
+      "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
+      "/car/car/Lincoln Navigator/MYXJ_20260112173058247_save.jpg",
+      "/car/car/Lincoln Navigator/MYXJ_20260112173119751_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Tri-Zone Automatic",
+    idealFor: ["Family airport pickups", "Business guests", "Wedding parties"],
+    features: [
+      "Seating Capacity: 6 passengers",
+      "Captain chairs, customizable ambient lighting, advanced noise reduction",
+      "Interior: Captain chairs, customizable ambient lighting, advanced noise reduction",
+    ],
+    description: "Elegant, spacious, and packed with technology.",
+    tagline: "Powerful Conveyance",
+  },
+  {
+    name: "Cadillac Escalade",
+    slug: "cadillac-escalade",
+    type: "SUV",
+    modelYear: "2025",
+    seating: 6,
+    mainImage: "/car/car/Cadaliac Escalade/MYXJ_20260112173138965_save.jpg",
+    images: [
+      "/car/car/Cadaliac Escalade/MYXJ_20260112173138965_save.jpg",
+      "/car/car/Cadaliac Escalade/MYXJ_20260112173227704_save.jpg",
+      "/car/car/Cadaliac Escalade/MYXJ_20260112173245612_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Tri-Zone Automatic",
+    idealFor: ["Executive travel", "Corporate events", "VIP transportation"],
+    features: [
+      "Seating Capacity: 6 passengers",
+      "Premium leather interior, OLED display, Super Cruise",
+      "Interior: Premium sound system, advanced safety features",
+    ],
+    description: "The pinnacle of American luxury and performance.",
+    tagline: "Executive Elegance",
+  },
+  {
+    name: "Chevy Suburban",
+    slug: "chevy-suburban",
+    type: "SUV",
+    modelYear: "New Model",
+    seating: 6,
+    mainImage: "/car/car/Chevy Suburban/MYXJ_20260112173304554_save.jpg",
+    images: [
+      "/car/car/Chevy Suburban/MYXJ_20260112173304554_save.jpg",
+      "/car/car/Chevy Suburban/MYXJ_20260112173334893_save.jpg",
+      "/car/car/Chevy Suburban/MYXJ_20260112173357288_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Tri-Zone Automatic",
+    idealFor: ["Group travel", "Airport transfers", "Special events"],
+    features: [
+      "Seating Capacity: 6 passengers",
+      "Spacious interior, premium amenities, smooth ride",
+      "Interior: Advanced entertainment system, power liftgate",
+    ],
+    description: "Spacious comfort for the whole family.",
+    tagline: "Spacious Comfort",
+  },
+
+  // Limousines - 3 vehicles
+  {
+    name: "Stretch Hummer",
+    slug: "stretch-hummer",
+    type: "LIMO",
+    modelYear: "New Model",
+    seating: 18,
+    mainImage: "/car/car/Stretch Hummer/MYXJ_20260112173415905_save.jpg",
+    images: [
+      "/car/car/Stretch Hummer/MYXJ_20260112173415905_save.jpg",
+      "/car/car/Stretch Hummer/MYXJ_20260112173430803_save.jpg",
+      "/car/car/Stretch Hummer/MYXJ_20260112173456282_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Multi-Zone Automatic",
+    idealFor: ["Bachelor/Bachelorette parties", "Prom nights", "Night out events"],
+    features: [
+      "Seating Capacity: 18 passengers",
+      "Premium sound system, LED lighting, bar area",
+      "Interior: Luxury seating, entertainment system, privacy divider",
+    ],
+    description: "Make a statement with this impressive stretch limousine.",
+    tagline: "Party in Style",
+  },
+  {
+    name: "Lincoln Navigator 16",
+    slug: "lincoln-navigator-16",
+    type: "LIMO",
+    modelYear: "New Model",
+    seating: 16,
+    mainImage: "/car/car/Lincoln Navigator 16/MYXJ_20260112173515879_save.jpg",
+    images: [
+      "/car/car/Lincoln Navigator 16/MYXJ_20260112173515879_save.jpg",
+      "/car/car/Lincoln Navigator 16/MYXJ_20260112173535982_save.jpg",
+      "/car/car/Lincoln Navigator 16/MYXJ_20260112173557071_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Multi-Zone Automatic",
+    idealFor: ["Wedding parties", "Corporate events", "Special celebrations"],
+    features: [
+      "Seating Capacity: 16 passengers",
+      "Ambient lighting, premium bar, luxury seating",
+      "Interior: State-of-the-art sound system, climate control",
+    ],
+    description: "Elegance and space combined for your special occasion.",
+    tagline: "Elegant Celebrations",
+  },
+  {
+    name: "Stretch MKT",
+    slug: "stretch-mkt",
+    type: "LIMO",
+    modelYear: "New Model",
+    seating: 10,
+    mainImage: "/car/car/Stretch MKT/MYXJ_20260112173615980_save.jpg",
+    images: [
+      "/car/car/Stretch MKT/MYXJ_20260112173615980_save.jpg",
+      "/car/car/Stretch MKT/MYXJ_20260112173631784_save.jpg",
+      "/car/car/Stretch MKT/MYXJ_20260112173644608_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Dual-Zone Automatic",
+    idealFor: ["Small group celebrations", "Wine tours", "Anniversary events"],
+    features: [
+      "Seating Capacity: 10 passengers",
+      "Premium interior, mood lighting, entertainment system",
+      "Interior: Comfortable seating, minibar, privacy glass",
+    ],
+    description: "Intimate luxury for your special moments.",
+    tagline: "Intimate Luxury",
+  },
+
+  // Mercedes Sprinters - 3 vehicles
+  {
+    name: "Mercedes – Executive Style",
+    slug: "mercedes-executive-style",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: 10,
+    mainImage: "/car/car/Mercedes – executive style/MYXJ_20260112173705100_save.jpg",
+    images: [
+      "/car/car/Mercedes – executive style/MYXJ_20260112173705100_save.jpg",
+      "/car/car/Mercedes – executive style/MYXJ_20260112173723099_save.jpg",
+      "/car/car/Mercedes – executive style/MYXJ_20260112173819523_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Corporate groups", "Executive shuttles", "Business meetings"],
+    features: [
+      "Seating Capacity: 10 passengers",
+      "Executive seating, conference table, premium amenities",
+      "Interior: Leather captain chairs, workspace, charging ports",
+    ],
+    description: "Executive comfort for business professionals.",
+    tagline: "Executive Transport",
+  },
+  {
+    name: "Mercedes – Limo Style",
+    slug: "mercedes-limo-style",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: 15,
+    mainImage: "/car/car/Mercedes – Limo Style/MYXJ_20260112173844726_save.jpg",
+    images: [
+      "/car/car/Mercedes – Limo Style/MYXJ_20260112173844726_save.jpg",
+      "/car/car/Mercedes – Limo Style/MYXJ_20260112173907344_save.jpg",
+      "/car/car/Mercedes – Limo Style/MYXJ_20260112173925410_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Wedding groups", "Special events", "VIP transportation"],
+    features: [
+      "Seating Capacity: 15 passengers",
+      "Luxury seating, ambient lighting, premium sound",
+      "Interior: Plush seating, entertainment system, bar area",
+    ],
+    description: "Limousine luxury in a spacious van format.",
+    tagline: "Van Luxury",
+  },
+  {
+    name: "Mercedes Shuttle – Style",
+    slug: "mercedes-shuttle-style",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: 15,
+    mainImage: "/car/car/Mercedes Shuttle – style/MYXJ_20260112173942295_save.jpg",
+    images: [
+      "/car/car/Mercedes Shuttle – style/MYXJ_20260112173942295_save.jpg",
+      "/car/car/Mercedes Shuttle – style/MYXJ_20260112174003556_save.jpg",
+      "/car/car/Mercedes Shuttle – style/MYXJ_20260112174027243_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Airport shuttles", "Hotel transfers", "Group tours"],
+    features: [
+      "Seating Capacity: 15 passengers",
+      "Comfortable seating, luggage space, smooth ride",
+      "Interior: Climate controlled, entertainment options",
+    ],
+    description: "Comfortable group transportation with style.",
+    tagline: "Shuttle Comfort",
+  },
+
+  // Ford Party Buses - 3 vehicles
+  {
+    name: "22 FORD Party BUS – Shuttle Style",
+    slug: "22-ford-party-bus-shuttle-style",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: 22,
+    mainImage: "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174041693_save.jpg",
+    images: [
+      "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174041693_save.jpg",
+      "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174056353_save.jpg",
+      "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174116228_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Large group events", "Company outings", "Concert transportation"],
+    features: [
+      "Seating Capacity: 22 passengers",
+      "Spacious interior, entertainment system, LED lighting",
+      "Interior: Party atmosphere, sound system, bar area",
+    ],
+    description: "Party on wheels for your group celebration.",
+    tagline: "Group Party",
+  },
+  {
+    name: "22 FORD Party BUS – Limo Style",
+    slug: "22-ford-party-bus-limo-style",
+    type: "LIMO",
+    modelYear: "New Model",
+    seating: 22,
+    mainImage: "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174134252_save.jpg",
+    images: [
+      "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174134252_save.jpg",
+      "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174152830_save.jpg",
+      "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174207839_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Bachelor parties", "Birthday celebrations", "Night club tours"],
+    features: [
+      "Seating Capacity: 22 passengers",
+      "Premium party setup, club lighting, premium sound",
+      "Interior: Dance floor, bar, LED displays",
+    ],
+    description: "Ultimate party experience on wheels.",
+    tagline: "Party Luxury",
+  },
+  {
+    name: "FORD Party BUS – Limo Style",
+    slug: "ford-party-bus-limo-style-28",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: 28,
+    mainImage: "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174222932_save.jpg",
+    images: [
+      "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174222932_save.jpg",
+      "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174306923_save.jpg",
+      "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174333543_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Large celebrations", "Corporate parties", "Sports events"],
+    features: [
+      "Seating Capacity: 28 passengers",
+      "Massive party space, premium sound, lighting effects",
+      "Interior: Spacious layout, entertainment center, bar",
+    ],
+    description: "Maximum capacity for maximum fun.",
+    tagline: "Mega Party",
+  },
+
+  // Mercedes Benz Freightliner - 3 vehicles
+  {
+    name: "Mercedes Benz Freightliner – Limo Style",
+    slug: "mercedes-benz-freightliner-limo-style-28",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: 28,
+    mainImage: "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174352589_save.jpg",
+    images: [
+      "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174352589_save.jpg",
+      "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174411688_save.jpg",
+      "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174427927_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Large weddings", "Corporate events", "Festival transportation"],
+    features: [
+      "Seating Capacity: 28 passengers",
+      "Luxury bus interior, premium amenities, entertainment",
+      "Interior: Club-style seating, lighting, sound system",
+    ],
+    description: "Luxury coach with limousine-style amenities.",
+    tagline: "Coach Luxury",
+  },
+  {
+    name: "Mercedes Benz Freightliner – Limo Style 35-45",
+    slug: "mercedes-benz-freightliner-limo-style-35-45",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: "35-45",
+    mainImage: "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174443926_save.jpg",
+    images: [
+      "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174443926_save.jpg",
+      "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174457566_save.jpg",
+      "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174517574_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Convention groups", "Large corporate events", "Tour groups"],
+    features: [
+      "Seating Capacity: 35-45 passengers",
+      "Spacious luxury interior, premium features, entertainment",
+      "Interior: Comfortable seating, climate control, multimedia",
+    ],
+    description: "Premium capacity for large group luxury travel.",
+    tagline: "Large Group Luxury",
+  },
+  {
+    name: "Mercedes Benz Freightliner - Shuttle Style",
+    slug: "mercedes-benz-freightliner-shuttle-style",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: "35-45",
+    mainImage: "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174535953_save.jpg",
+    images: [
+      "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174535953_save.jpg",
+      "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174659919_save.jpg",
+      "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174720300_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Convention shuttles", "Corporate transfers", "Large group transport"],
+    features: [
+      "Seating Capacity: 35-45 passengers",
+      "Comfortable shuttle seating, luggage storage, amenities",
+      "Interior: Climate controlled, entertainment, storage",
+    ],
+    description: "Efficient luxury shuttle for large groups.",
+    tagline: "Shuttle Excellence",
+  },
+
+  // Luxury Coach Buses - 3 vehicles
+  {
+    name: "Luxury Coach Bus",
+    slug: "luxury-coach-bus",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: "40-56",
+    mainImage: "/car/car/Luxury Coach Bus/MYXJ_20260112174746071_save.jpg",
+    images: [
+      "/car/car/Luxury Coach Bus/MYXJ_20260112174746071_save.jpg",
+      "/car/car/Luxury Coach Bus/MYXJ_20260112174803602_save.jpg",
+      "/car/car/Luxury Coach Bus/MYXJ_20260112174825233_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Charter tours", "Long distance travel", "Large events"],
+    features: [
+      "Seating Capacity: 40-56 passengers",
+      "Reclining seats, overhead storage, restroom",
+      "Interior: Premium coach seating, entertainment, WiFi",
+    ],
+    description: "Full-size luxury coach for maximum comfort.",
+    tagline: "Coach Comfort",
+  },
+  {
+    name: "Luxury Coach Bus Premium",
+    slug: "luxury-coach-bus-premium",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: "40-56",
+    mainImage: "/car/car/Luxury Coach Bus2/MYXJ_20260112174841868_save.jpg",
+    images: [
+      "/car/car/Luxury Coach Bus2/MYXJ_20260112174841868_save.jpg",
+      "/car/car/Luxury Coach Bus2/MYXJ_20260112174902223_save.jpg",
+      "/car/car/Luxury Coach Bus2/MYXJ_20260112174917820_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["Corporate conferences", "Sports teams", "Music tours"],
+    features: [
+      "Seating Capacity: 40-56 passengers",
+      "Premium reclining seats, power outlets, WiFi",
+      "Interior: Luxury amenities, entertainment system, restroom",
+    ],
+    description: "Premium coach with top-tier amenities.",
+    tagline: "Premium Travel",
+  },
+  {
+    name: "Luxury Coach Bus Elite",
+    slug: "luxury-coach-bus-elite",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: "40-56",
+    mainImage: "/car/car/Luxury Coach Bus3/MYXJ_20260112174937406_save.jpg",
+    images: [
+      "/car/car/Luxury Coach Bus3/MYXJ_20260112174937406_save.jpg",
+      "/car/car/Luxury Coach Bus3/MYXJ_20260112174951114_save.jpg",
+      "/car/car/Luxury Coach Bus3/MYXJ_20260112175007566_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: ["VIP tours", "Executive groups", "Special events"],
+    features: [
+      "Seating Capacity: 40-56 passengers",
+      "Elite seating, premium entertainment, luxury amenities",
+      "Interior: Top-tier comfort, advanced features, WiFi",
+    ],
+    description: "Elite coach experience for discerning travelers.",
+    tagline: "Elite Experience",
+  },
+];
+
+export function getVehicleBySlug(slug: string): VehicleDetails | undefined {
+  return vehiclesData.find((vehicle) => vehicle.slug === slug);
+}
+
+export function getAllVehicleSlugs(): string[] {
+  return vehiclesData.map((vehicle) => vehicle.slug);
+}
