@@ -7,6 +7,7 @@ import { WhyChooseSection } from "@/components/why-choose-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ServiceAreasSection } from "@/components/service-areas-section"
 import { Footer } from "@/components/footer"
+import { FloatingBookingButton } from "@/components/floating-booking-button"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <TestimonialsSection />
       <ServiceAreasSection />
       <Footer />
+      <FloatingBookingButton />
     </main>
   )
 }

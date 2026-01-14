@@ -7,6 +7,7 @@ import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingBookingButton } from "@/components/floating-booking-button"
 
 export default function AboutPage() {
   const ref = useRef(null)
@@ -622,6 +623,7 @@ export default function AboutPage() {
       </section>
 
       <Footer />
+      <FloatingBookingButton />
     </main>
   )
 }

@@ -111,19 +111,6 @@ export function HeroSection() {
           </div>
         </motion.div>
       </div>
-
-      {/* Floating Book NOW Button */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 2 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <Button asChild className="fixed bottom-8 right-8 z-50 bg-[#FF4500] hover:bg-[#FF6347] text-white px-8 py-6 text-lg rounded-full shadow-2xl animate-float">
-          <a href="/contact">Book NOW</a>
-        </Button>
-      </motion.div>
     </section>
   )
 }

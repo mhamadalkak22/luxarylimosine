@@ -6,6 +6,7 @@ import { X, User, Phone, Mail, MapPin, Calendar, Clock, Users, MessageSquare, Se
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import emailjs from "@emailjs/browser";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -35,30 +36,58 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // EmailJS Configuration
+      const serviceId = "service_67ey4mm";
+      const templateId = "template_7dio5rr";
+      const publicKey = "nylXtr816ANF9Bl9g";
 
-    setIsSubmitting(false);
-    setSubmitted(true);
+      // Prepare template parameters
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        phone: formData.phone,
+        email: formData.email,
+        pickup_location: formData.pickupLocation,
+        date: formData.date,
+        time: formData.time,
+        dropoff_location: formData.dropoffLocation,
+        passengers: formData.passengers || "Not specified",
+        hours: formData.hours || "Not specified",
+        special_request: formData.specialRequest || "None",
+        vehicle_name: vehicleName || "Not specified",
+      };
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        pickupLocation: "",
-        date: "",
-        time: "",
-        dropoffLocation: "",
-        passengers: "",
-        hours: "",
-        specialRequest: "",
-      });
-      setSubmitted(false);
-      onClose();
-    }, 3000);
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setIsSubmitting(false);
+      setSubmitted(true);
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          pickupLocation: "",
+          date: "",
+          time: "",
+          dropoffLocation: "",
+          passengers: "",
+          hours: "",
+          specialRequest: "",
+        });
+        setSubmitted(false);
+        onClose();
+      }, 3000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setIsSubmitting(false);
+      alert("Failed to send quote request. Please try again or contact us directly.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -86,7 +115,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-zinc-900 border-2 border-zinc-800 rounded-3xl w-full max-w-2xl my-8 relative shadow-2xl"
+            className="bg-zinc-900 border-2 border-zinc-800 rounded-3xl w-full max-w-md my-4 relative shadow-2xl"
           >
             {/* Decorative Background */}
             <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
@@ -120,47 +149,52 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
 
             {/* Close Button */}
             <button
-              onClick={onClose}
-              className="absolute top-6 right-6 z-10 w-10 h-10 bg-zinc-800 hover:bg-[#FF4500] rounded-full flex items-center justify-center transition-all group"
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onClose();
+              }}
+              className="absolute top-6 right-6 z-50 w-10 h-10 bg-zinc-800 hover:bg-[#FF4500] rounded-full flex items-center justify-center transition-all group cursor-pointer"
             >
               <X className="h-5 w-5 text-white group-hover:rotate-90 transition-transform" />
             </button>
 
             {/* Content */}
-            <div className="p-8 md:p-10 relative z-10">
+            <div className="p-5 md:p-6 relative z-10">
               {/* Header */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-center mb-8"
+                className="text-center mb-4"
               >
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                  className="inline-block text-[#FF4500] text-3xl mb-4"
+                  className="inline-block text-[#FF4500] text-xl mb-2"
                 >
                   ✱
                 </motion.div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-2">Get A Quote</h2>
+                <h2 className="text-xl md:text-2xl font-bold mb-1">Get A Quote</h2>
                 {vehicleName && (
-                  <p className="text-gray-400 text-lg">
+                  <p className="text-gray-400 text-xs">
                     for <span className="text-[#FF4500] font-semibold">{vehicleName}</span>
                   </p>
                 )}
-                <p className="text-gray-500 mt-2">Fill out the form and we'll get back to you shortly</p>
+                <p className="text-gray-500 text-xs mt-1">Fill out the form and we'll get back to you shortly</p>
               </motion.div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-3">
                 {/* Name */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                    <User className="h-4 w-4 text-[#FF4500]" />
+                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                    <User className="h-3.5 w-3.5 text-[#FF4500]" />
                     Name *
                   </label>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -171,8 +205,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        placeholder="First"
-                        className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      placeholder="First"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
                       />
                     </div>
                     <div>
@@ -182,8 +216,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        placeholder="Last"
-                        className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      placeholder="Last"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
                       />
                     </div>
                   </div>
@@ -197,8 +231,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   className="grid md:grid-cols-2 gap-4"
                 >
                   <div>
-                    <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-[#FF4500]" />
+                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                      <Phone className="h-3.5 w-3.5 text-[#FF4500]" />
                       Phone *
                     </label>
                     <Input
@@ -208,12 +242,12 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       onChange={handleChange}
                       required
                       placeholder="71 123 456"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                      <Mail className="h-4 w-4 text-[#FF4500]" />
+                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                      <Mail className="h-3.5 w-3.5 text-[#FF4500]" />
                       Email *
                     </label>
                     <Input
@@ -223,7 +257,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       onChange={handleChange}
                       required
                       placeholder="you@example.com"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
                     />
                   </div>
                 </motion.div>
@@ -234,8 +268,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-[#FF4500]" />
+                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                    <MapPin className="h-3.5 w-3.5 text-[#FF4500]" />
                     Pick up Location *
                   </label>
                   <Input
@@ -245,7 +279,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                     onChange={handleChange}
                     required
                     placeholder="Enter pickup address"
-                    className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                    className="bg-black border-zinc-700 focus:border-[#FF4500] h-11 text-white text-sm"
                   />
                 </motion.div>
 
@@ -257,8 +291,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   className="grid md:grid-cols-2 gap-4"
                 >
                   <div>
-                    <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                      <Calendar className="h-4 w-4 text-[#FF4500]" />
+                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                      <Calendar className="h-3.5 w-3.5 text-[#FF4500]" />
                       Date *
                     </label>
                     <Input
@@ -267,12 +301,13 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       value={formData.date}
                       onChange={handleChange}
                       required
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      placeholder="mm/dd/yyyy"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-11 text-white text-sm [color-scheme:dark]"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-[#FF4500]" />
+                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                      <Clock className="h-3.5 w-3.5 text-[#FF4500]" />
                       Time *
                     </label>
                     <Input
@@ -281,7 +316,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       value={formData.time}
                       onChange={handleChange}
                       required
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      placeholder="--:--"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-11 text-white text-sm [color-scheme:dark]"
                     />
                   </div>
                 </motion.div>
@@ -292,8 +328,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-[#FF4500]" />
+                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                    <MapPin className="h-3.5 w-3.5 text-[#FF4500]" />
                     Drop off Location *
                   </label>
                   <Input
@@ -303,7 +339,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                     onChange={handleChange}
                     required
                     placeholder="Enter dropoff address"
-                    className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                    className="bg-black border-zinc-700 focus:border-[#FF4500] h-11 text-white text-sm"
                   />
                 </motion.div>
 
@@ -315,8 +351,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   className="grid md:grid-cols-2 gap-4"
                 >
                   <div>
-                    <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                      <Users className="h-4 w-4 text-[#FF4500]" />
+                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                      <Users className="h-3.5 w-3.5 text-[#FF4500]" />
                       How Many Passengers
                     </label>
                     <Input
@@ -325,12 +361,12 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       value={formData.passengers}
                       onChange={handleChange}
                       placeholder="Number of passengers"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-[#FF4500]" />
+                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                      <Clock className="h-3.5 w-3.5 text-[#FF4500]" />
                       How Many Hours
                     </label>
                     <Input
@@ -339,7 +375,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       value={formData.hours}
                       onChange={handleChange}
                       placeholder="Duration in hours"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
                     />
                   </div>
                 </motion.div>
@@ -350,8 +386,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label className="block text-sm font-semibold mb-2 flex items-center gap-2">
-                    <MessageSquare className="h-4 w-4 text-[#FF4500]" />
+                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
+                    <MessageSquare className="h-3.5 w-3.5 text-[#FF4500]" />
                     Special Request
                   </label>
                   <Textarea
@@ -359,8 +395,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                     value={formData.specialRequest}
                     onChange={handleChange}
                     placeholder="Any special requirements or requests..."
-                    rows={4}
-                    className="bg-black border-zinc-700 focus:border-[#FF4500] text-white resize-none"
+                    rows={2}
+                    className="bg-black border-zinc-700 focus:border-[#FF4500] text-white text-xs resize-none"
                   />
                 </motion.div>
 
@@ -369,13 +405,13 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.55 }}
-                  className="pt-4"
+                  className="pt-1"
                 >
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button
                       type="submit"
                       disabled={isSubmitting || submitted}
-                      className="w-full bg-[#FF4500] hover:bg-[#FF6347] text-white h-14 text-lg rounded-full flex items-center justify-center gap-2 font-bold shadow-lg shadow-[#FF4500]/20"
+                      className="w-full bg-[#FF4500] hover:bg-[#FF6347] text-white h-10 text-sm rounded-full flex items-center justify-center gap-2 font-bold shadow-lg shadow-[#FF4500]/20"
                     >
                       {isSubmitting ? (
                         <>

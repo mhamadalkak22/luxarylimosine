@@ -22,6 +22,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { FloatingBookingButton } from "@/components/floating-booking-button";
 
 export default function ServicesPage() {
   const ref = useRef(null);
@@ -640,6 +641,7 @@ export default function ServicesPage() {
       </section>
 
       <Footer />
+      <FloatingBookingButton />
     </main>
   );
 }

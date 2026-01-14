@@ -28,7 +28,7 @@ export function Footer() {
                 transition={{ duration: 0.5 }}
               >
                 <img
-                  src="/logo.png"
+                  src="/logorename.png"
                   alt="Chicago Luxury Limousine"
                   width="220"
                   height="90"

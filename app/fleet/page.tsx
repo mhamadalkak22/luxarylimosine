@@ -9,6 +9,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { VehicleCard } from "@/components/vehicle-card";
 import { vehiclesData } from "@/lib/vehicles-data";
+import { FloatingBookingButton } from "@/components/floating-booking-button";
 
 export default function FleetPage() {
   const ref = useRef(null);
@@ -414,6 +415,7 @@ export default function FleetPage() {
       </section>
 
       <Footer />
+      <FloatingBookingButton />
     </main>
   );
 }

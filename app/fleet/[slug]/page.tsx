@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BookingModal } from "@/components/booking-modal";
+import { FloatingBookingButton } from "@/components/floating-booking-button";
 import { getVehicleBySlug, type VehicleDetails } from "@/lib/vehicles-data";
 import { notFound, useParams } from "next/navigation";
 
@@ -362,6 +363,9 @@ export default function VehicleDetailPage() {
         onClose={() => setIsBookingModalOpen(false)}
         vehicleName={vehicle.name}
       />
+
+      {/* Floating Booking Button */}
+      <FloatingBookingButton />
     </main>
   );
 }

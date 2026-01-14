@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { motion } from "framer-motion"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingBookingButton } from "@/components/floating-booking-button"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -526,6 +527,7 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+      <FloatingBookingButton />
     </main>
   )
 }

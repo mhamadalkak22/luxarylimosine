@@ -8,54 +8,59 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 const fleetData = [
-  {
-    name: "Mercedes – executive style",
-    type: "BUSS",
-    image: "/luxury-mercedes-sprinter-executive-van-black.jpg",
-    modelYear: "New Model",
-    seating: 10,
-  },
+  // 1. SUV - Lincoln Navigator
   {
     name: "Lincoln Navigator",
     type: "SUV",
-    image: "/luxury-lincoln-navigator-black-suv.jpg",
+    image: "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
     modelYear: "New Model",
     seating: 6,
+    slug: "lincoln-navigator",
   },
+  // 2. SUV - Cadillac Escalade
   {
     name: "Cadillac Escalade",
     type: "SUV",
-    image: "/luxury-cadillac-escalade-black-suv.jpg",
+    image: "/car/car/Cadaliac Escalade/MYXJ_20260112173138965_save.jpg",
     modelYear: "2025",
     seating: 6,
+    slug: "cadillac-escalade",
   },
+  // 3. SUV - Chevy Suburban
   {
     name: "Chevy Suburban",
     type: "SUV",
-    image: "/luxury-chevrolet-suburban-black-suv.jpg",
+    image: "/car/car/Chevy Suburban/MYXJ_20260112173304554_save.jpg",
     modelYear: "New Model",
     seating: 6,
+    slug: "chevy-suburban",
   },
+  // 4. LIMO - Stretch Hummer
   {
     name: "Stretch Hummer",
     type: "LIMO",
-    image: "/stretch-hummer-limousine-black.jpg",
+    image: "/car/car/Stretch Hummer/MYXJ_20260112173415905_save.jpg",
     modelYear: "New Model",
     seating: 18,
+    slug: "stretch-hummer",
   },
+  // 5. LIMO - Lincoln Navigator 16
   {
     name: "Lincoln Navigator 16",
     type: "LIMO",
-    image: "/lincoln-navigator-stretch-limousine-black.jpg",
+    image: "/car/car/Lincoln Navigator 16/MYXJ_20260112173515879_save.jpg",
     modelYear: "New Model",
     seating: 16,
+    slug: "lincoln-navigator-16",
   },
+  // 6. BUSS - Luxury Coach Bus
   {
-    name: "Stretch MKT",
-    type: "LIMO",
-    image: "/lincoln-mkt-stretch-limousine-black.jpg",
+    name: "Luxury Coach Bus",
+    type: "BUSS",
+    image: "/car/car/Luxury Coach Bus/MYXJ_20260112174746071_save.jpg",
     modelYear: "New Model",
-    seating: 10,
+    seating: "40-56",
+    slug: "luxury-coach-bus",
   },
 ]
 
@@ -177,7 +182,7 @@ export function FleetSection() {
                   </div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button asChild className="w-full bg-transparent border-2 border-white hover:bg-[#FF4500] hover:border-[#FF4500] text-white group/btn">
-                      <a href="/contact">
+                      <a href={`/fleet/${vehicle.slug}`}>
                         <span className="flex items-center justify-between w-full">
                           <span className="font-bold text-lg">GET A QUOTE</span>
                           <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
