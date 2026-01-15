@@ -70,10 +70,10 @@ export function AnimatedBackground() {
           animate={{
             opacity: [0, 1, 0],
             y: [0, -500],
-            x: [0, Math.random() * 100 - 50],
+            x: [0, (particle.id * 37) % 100 - 50],
           }}
           transition={{
-            duration: Math.random() * 10 + 10,
+            duration: (particle.id * 1.3) % 10 + 10,
             repeat: Number.POSITIVE_INFINITY,
             delay: particle.delay,
             ease: "linear",

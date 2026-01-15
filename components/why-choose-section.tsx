@@ -3,7 +3,7 @@
 import { Car, User, Clock, Target } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 
 const features = [
   {
@@ -31,6 +31,20 @@ const features = [
 export function WhyChooseSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [particles, setParticles] = useState<Array<{ id: number; left: number; top: number; duration: number; delay: number; x: number }>>([])
+
+  useEffect(() => {
+    // Generate particles on client side only
+    const newParticles = Array.from({ length: 10 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: Math.random() * 8 + 6,
+      delay: Math.random() * 5,
+      x: Math.random() * 100 - 50,
+    }))
+    setParticles(newParticles)
+  }, [])
 
   return (
     <section className="py-20 bg-black relative overflow-hidden" ref={ref}>
@@ -61,23 +75,23 @@ export function WhyChooseSection() {
         className="absolute bottom-0 right-1/4 w-[700px] h-[700px] bg-red-600/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      {Array.from({ length: 10 }).map((_, i) => (
+      {particles.map((particle) => (
         <motion.div
-          key={i}
+          key={particle.id}
           animate={{
             y: [0, -400],
             opacity: [0, 1, 0],
-            x: [0, Math.random() * 100 - 50],
+            x: [0, particle.x],
           }}
           transition={{
-            duration: Math.random() * 8 + 6,
+            duration: particle.duration,
             repeat: Number.POSITIVE_INFINITY,
-            delay: Math.random() * 5,
+            delay: particle.delay,
             ease: "linear",
           }}
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
           }}
           className="absolute w-2 h-2 bg-[#FF4500]/60 rounded-full pointer-events-none"
         />

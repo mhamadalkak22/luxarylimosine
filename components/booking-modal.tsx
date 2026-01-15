@@ -115,7 +115,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-zinc-900 border-2 border-zinc-800 rounded-3xl w-full max-w-md my-4 relative shadow-2xl"
+            className="bg-zinc-900 border-2 border-zinc-800 rounded-2xl w-[95%] max-w-[340px] my-2 relative shadow-2xl"
           >
             {/* Decorative Background */}
             <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
@@ -155,46 +155,46 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                 e.stopPropagation();
                 onClose();
               }}
-              className="absolute top-6 right-6 z-50 w-10 h-10 bg-zinc-800 hover:bg-[#FF4500] rounded-full flex items-center justify-center transition-all group cursor-pointer"
+              className="absolute top-3 right-3 md:top-4 md:right-4 z-50 w-7 h-7 md:w-8 md:h-8 bg-zinc-800 hover:bg-[#FF4500] rounded-full flex items-center justify-center transition-all group cursor-pointer"
             >
-              <X className="h-5 w-5 text-white group-hover:rotate-90 transition-transform" />
+              <X className="h-3.5 w-3.5 md:h-4 md:w-4 text-white group-hover:rotate-90 transition-transform" />
             </button>
 
             {/* Content */}
-            <div className="p-5 md:p-6 relative z-10">
+            <div className="p-3 md:p-5 relative z-10">
               {/* Header */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-center mb-4"
+                className="text-center mb-2"
               >
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                  className="inline-block text-[#FF4500] text-xl mb-2"
+                  className="inline-block text-[#FF4500] text-base md:text-lg mb-0.5"
                 >
                   ✱
                 </motion.div>
-                <h2 className="text-xl md:text-2xl font-bold mb-1">Get A Quote</h2>
+                <h2 className="text-base md:text-xl font-bold mb-0.5">Get A Quote</h2>
                 {vehicleName && (
-                  <p className="text-gray-400 text-xs">
+                  <p className="text-gray-400 text-[9px] md:text-[10px]">
                     for <span className="text-[#FF4500] font-semibold">{vehicleName}</span>
                   </p>
                 )}
-                <p className="text-gray-500 text-xs mt-1">Fill out the form and we'll get back to you shortly</p>
+                <p className="text-gray-500 text-[9px] md:text-[10px] mt-0.5">Fill out the form and we'll get back to you shortly</p>
               </motion.div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-3">
+              <form onSubmit={handleSubmit} className="space-y-1.5 md:space-y-2">
                 {/* Name */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                    <User className="h-3.5 w-3.5 text-[#FF4500]" />
+                  <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                    <User className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                     Name *
                   </label>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -206,7 +206,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                         onChange={handleChange}
                         required
                       placeholder="First"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-7 md:h-8 text-white text-[10px] md:text-[11px] px-1.5 md:px-2"
                       />
                     </div>
                     <div>
@@ -217,7 +217,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                         onChange={handleChange}
                         required
                       placeholder="Last"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-7 md:h-8 text-white text-[10px] md:text-[11px] px-1.5 md:px-2"
                       />
                     </div>
                   </div>
@@ -228,11 +228,11 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.25 }}
-                  className="grid md:grid-cols-2 gap-4"
+                  className="grid md:grid-cols-2 gap-1.5 md:gap-2"
                 >
                   <div>
-                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                      <Phone className="h-3.5 w-3.5 text-[#FF4500]" />
+                    <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                      <Phone className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                       Phone *
                     </label>
                     <Input
@@ -242,12 +242,12 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       onChange={handleChange}
                       required
                       placeholder="71 123 456"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-7 md:h-8 text-white text-[10px] md:text-[11px] px-1.5 md:px-2"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                      <Mail className="h-3.5 w-3.5 text-[#FF4500]" />
+                    <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                      <Mail className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                       Email *
                     </label>
                     <Input
@@ -257,7 +257,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       onChange={handleChange}
                       required
                       placeholder="you@example.com"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-7 md:h-8 text-white text-[10px] md:text-[11px] px-1.5 md:px-2"
                     />
                   </div>
                 </motion.div>
@@ -268,8 +268,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                    <MapPin className="h-3.5 w-3.5 text-[#FF4500]" />
+                  <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                    <MapPin className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                     Pick up Location *
                   </label>
                   <Input
@@ -288,11 +288,11 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.35 }}
-                  className="grid md:grid-cols-2 gap-4"
+                  className="grid md:grid-cols-2 gap-1.5 md:gap-2"
                 >
                   <div>
-                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                      <Calendar className="h-3.5 w-3.5 text-[#FF4500]" />
+                    <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                      <Calendar className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                       Date *
                     </label>
                     <Input
@@ -306,8 +306,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                      <Clock className="h-3.5 w-3.5 text-[#FF4500]" />
+                    <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                      <Clock className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                       Time *
                     </label>
                     <Input
@@ -328,8 +328,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                    <MapPin className="h-3.5 w-3.5 text-[#FF4500]" />
+                  <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                    <MapPin className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                     Drop off Location *
                   </label>
                   <Input
@@ -348,11 +348,11 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.45 }}
-                  className="grid md:grid-cols-2 gap-4"
+                  className="grid md:grid-cols-2 gap-1.5 md:gap-2"
                 >
                   <div>
-                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                      <Users className="h-3.5 w-3.5 text-[#FF4500]" />
+                    <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                      <Users className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                       How Many Passengers
                     </label>
                     <Input
@@ -361,12 +361,12 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       value={formData.passengers}
                       onChange={handleChange}
                       placeholder="Number of passengers"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-7 md:h-8 text-white text-[10px] md:text-[11px] px-1.5 md:px-2"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                      <Clock className="h-3.5 w-3.5 text-[#FF4500]" />
+                    <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                      <Clock className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                       How Many Hours
                     </label>
                     <Input
@@ -375,7 +375,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                       value={formData.hours}
                       onChange={handleChange}
                       placeholder="Duration in hours"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-9 text-white text-xs"
+                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-7 md:h-8 text-white text-[10px] md:text-[11px] px-1.5 md:px-2"
                     />
                   </div>
                 </motion.div>
@@ -386,8 +386,8 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label className="block text-xs font-semibold mb-1.5 flex items-center gap-2">
-                    <MessageSquare className="h-3.5 w-3.5 text-[#FF4500]" />
+                  <label className="block text-[9px] md:text-[10px] font-semibold mb-0.5 md:mb-1 flex items-center gap-1">
+                    <MessageSquare className="h-2.5 w-2.5 md:h-3 md:w-3 text-[#FF4500]" />
                     Special Request
                   </label>
                   <Textarea
@@ -396,7 +396,7 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                     onChange={handleChange}
                     placeholder="Any special requirements or requests..."
                     rows={2}
-                    className="bg-black border-zinc-700 focus:border-[#FF4500] text-white text-xs resize-none"
+                    className="bg-black border-zinc-700 focus:border-[#FF4500] text-white text-[10px] md:text-[11px] resize-none px-1.5 md:px-2 py-1 md:py-1.5"
                   />
                 </motion.div>
 
@@ -405,13 +405,13 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.55 }}
-                  className="pt-1"
+                  className="pt-0.5 md:pt-1"
                 >
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button
                       type="submit"
                       disabled={isSubmitting || submitted}
-                      className="w-full bg-[#FF4500] hover:bg-[#FF6347] text-white h-10 text-sm rounded-full flex items-center justify-center gap-2 font-bold shadow-lg shadow-[#FF4500]/20"
+                      className="w-full bg-[#FF4500] hover:bg-[#FF6347] text-white h-8 md:h-9 text-[10px] md:text-xs rounded-full flex items-center justify-center gap-1 md:gap-1.5 font-bold shadow-lg shadow-[#FF4500]/20"
                     >
                       {isSubmitting ? (
                         <>
