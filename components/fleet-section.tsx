@@ -35,33 +35,6 @@ const fleetData = [
     seating: 6,
     slug: "chevy-suburban",
   },
-  // 4. LIMO - Stretch Hummer
-  {
-    name: "Stretch Hummer",
-    type: "LIMO",
-    image: "/car/car/Stretch Hummer/MYXJ_20260112173415905_save.jpg",
-    modelYear: "New Model",
-    seating: 18,
-    slug: "stretch-hummer",
-  },
-  // 5. LIMO - Lincoln Navigator 16
-  {
-    name: "Lincoln Navigator 16",
-    type: "LIMO",
-    image: "/car/car/Lincoln Navigator 16/MYXJ_20260112173515879_save.jpg",
-    modelYear: "New Model",
-    seating: 16,
-    slug: "lincoln-navigator-16",
-  },
-  // 6. BUSS - Luxury Coach Bus
-  {
-    name: "Luxury Coach Bus",
-    type: "BUSS",
-    image: "/car/car/Luxury Coach Bus/MYXJ_20260112174746071_save.jpg",
-    modelYear: "New Model",
-    seating: "40-56",
-    slug: "luxury-coach-bus",
-  },
 ]
 
 export function FleetSection() {

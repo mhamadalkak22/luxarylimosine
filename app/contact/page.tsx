@@ -58,8 +58,8 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Call Us",
-      value: "(+1) 708-497-5200",
-      href: "tel:+17084975200",
+      value: "(+1) 773-550-2500",
+      href: "tel:+17735502500",
       description: "Available 24/7",
     },
     {
@@ -72,8 +72,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Visit Us",
-      value: "808 W Higgins Rd 1-b, Park Ridge, IL 60068",
-      href: "https://www.google.com/maps/dir//808+W+Higgins+Rd+1-+b+Park+Ridge,+IL+60068+USA/@41.9865154,-87.8356541,18z/data=!4m5!4m4!1m0!1m2!1m1!1s0x880fc9f2d17bffff:0xdc1674a2439a00d7",
+      value: "8536 W Lawrence Ave Norridge IL 60706",
+      href: "https://www.google.com/maps/search/8536+W+Lawrence+Ave+Norridge+IL+60706",
       description: "Serving Chicagoland",
     },
   ]
@@ -437,7 +437,7 @@ export default function ContactPage() {
                   {[
                     {
                       Icon: Map,
-                      href: "https://www.google.com/maps/dir//808+W+Higgins+Rd+1-+b+Park+Ridge,+IL+60068+USA/@41.9865154,-87.8356541,18z/data=!4m5!4m4!1m0!1m2!1m1!1s0x880fc9f2d17bffff:0xdc1674a2439a00d7",
+                      href: "https://www.google.com/maps/search/8536+W+Lawrence+Ave+Norridge+IL+60706",
                       label: "Google Maps",
                     },
                     {
@@ -513,7 +513,7 @@ export default function ContactPage() {
             className="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-zinc-800"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.8!2d-87.8356541!3d41.9865154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc9f2d17bffff%3A0xdc1674a2439a00d7!2s808%20W%20Higgins%20Rd%201-b%2C%20Park%20Ridge%2C%20IL%2060068!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps?ll=41.986515,-87.835654&z=10&t=m&hl=en-US&gl=US&mapclient=embed&q=808+W+Higgins+Rd+1-+b+Park+Ridge,+IL+60068+USA&output=embed"
               width="100%"
               height="500"
               style={{ border: 0 }}

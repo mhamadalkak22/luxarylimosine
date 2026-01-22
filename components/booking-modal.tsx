@@ -117,34 +117,17 @@ export function BookingModal({ isOpen, onClose, vehicleName }: BookingModalProps
             onClick={(e) => e.stopPropagation()}
             className="bg-zinc-900 border-2 border-zinc-800 rounded-2xl w-[95%] max-w-[340px] my-2 relative shadow-2xl"
           >
-            {/* Decorative Background */}
-            <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
-              <motion.div
-                animate={{
-                  scale: [1, 1.2, 1],
-                  rotate: [0, 90, 0],
-                  opacity: [0.1, 0.15, 0.1],
+            {/* Watermark Background */}
+            <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none z-0">
+              <img
+                src="/watermark.jpeg"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover opacity-30"
+                style={{
+                  filter: "brightness(0.9) contrast(1.2)",
                 }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="absolute -top-20 -right-20 w-64 h-64 bg-[#FF4500]/20 rounded-full blur-3xl"
               />
-              <motion.div
-                animate={{
-                  scale: [1, 1.3, 1],
-                  rotate: [0, -90, 0],
-                  opacity: [0.1, 0.15, 0.1],
-                }}
-                transition={{
-                  duration: 12,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="absolute -bottom-20 -left-20 w-64 h-64 bg-red-600/20 rounded-full blur-3xl"
-              />
+              <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/70 via-zinc-900/60 to-zinc-900/70" />
             </div>
 
             {/* Close Button */}

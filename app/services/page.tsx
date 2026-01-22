@@ -256,7 +256,7 @@ export default function ServicesPage() {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full"
                 >
-                  <a href="tel:+17084975200">Call Us</a>
+                  <a href="tel:+17735502500">Call Us</a>
                 </Button>
               </motion.div>
             </motion.div>
@@ -361,16 +361,17 @@ export default function ServicesPage() {
 
                   {/* Button */}
                   <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className="relative z-10"
                   >
                     <Button
                       asChild
-                      className="w-12 h-12 bg-[#FF4500] hover:bg-[#FF6347] text-white rounded-full p-0 flex items-center justify-center"
+                      className="w-full bg-[#FF4500] hover:bg-[#FF6347] text-white rounded-full py-2.5 px-4 flex items-center justify-center gap-2 text-sm font-semibold"
                     >
                       <a href="/fleet">
-                        <ArrowRight className="h-5 w-5" />
+                        View Fleet
+                        <ArrowRight className="h-4 w-4" />
                       </a>
                     </Button>
                   </motion.div>
@@ -617,8 +618,8 @@ export default function ServicesPage() {
                     variant="outline"
                     className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full flex items-center gap-2"
                   >
-                    <a href="tel:+17084975200">
-                      (+1) 708-497-5200
+                    <a href="tel:+17735502500">
+                      (+1) 773-550-2500
                       <Phone className="h-5 w-5" />
                     </a>
                   </Button>

@@ -403,8 +403,8 @@ export default function FleetPage() {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full flex items-center gap-2"
                 >
-                  <a href="tel:+17084975200">
-                    (+1) 708-497-5200
+                  <a href="tel:+17735502500">
+                    (+1) 773-550-2500
                     <Phone className="h-5 w-5" />
                   </a>
                 </Button>

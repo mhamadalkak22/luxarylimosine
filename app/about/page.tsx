@@ -164,7 +164,7 @@ export default function AboutPage() {
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button asChild variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full">
-                    <a href="tel:+17084975200">Call Now</a>
+                    <a href="tel:+17735502500">Call Now</a>
                   </Button>
                 </motion.div>
               </motion.div>
@@ -183,7 +183,7 @@ export default function AboutPage() {
                 className="relative rounded-3xl overflow-hidden h-[600px]"
               >
                 <img
-                  src="/luxury-cadillac-escalade-suv-at-sunset-desert-land.jpg"
+                  src="/rangerrover.jpeg"
                   alt="Luxury Vehicle"
                   className="w-full h-full object-cover"
                 />
@@ -610,7 +610,7 @@ export default function AboutPage() {
 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button asChild variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full flex items-center gap-2">
-                    <a href="tel:+17084975200">
+                    <a href="tel:+17735502500">
                       Call Us
                       <Phone className="h-5 w-5" />
                     </a>

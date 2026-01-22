@@ -7,7 +7,7 @@ import { AnimatedBackground } from "./animated-background"
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
       {/* Background Image */}
       <motion.div
         initial={{ scale: 1.2, opacity: 0 }}
@@ -87,7 +87,7 @@ export function HeroSection() {
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button asChild className="bg-[#FF4500] hover:bg-[#FF6347] text-white px-8 py-6 text-lg rounded-full flex items-center gap-2">
-              <a href="tel:+17084975200">
+              <a href="tel:+17735502500">
                 CALL US
                 <Phone className="h-5 w-5" />
               </a>

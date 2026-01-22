@@ -15,7 +15,7 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10"
+      className="fixed top-[52px] left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -97,7 +97,7 @@ export function Header() {
                 asChild
                 className="bg-[#FF4500] hover:bg-[#FF6347] text-white px-6 rounded-full"
               >
-                <a href="tel:+17084975200">CALL US</a>
+                <a href="tel:+17735502500">CALL US</a>
               </Button>
             </motion.div>
             <motion.div
@@ -109,7 +109,7 @@ export function Header() {
                 size="icon"
                 className="bg-[#FF4500] hover:bg-[#FF6347] text-white rounded-full"
               >
-                <a href="tel:+17084975200">
+                <a href="tel:+17735502500">
                   <Phone className="h-5 w-5" />
                 </a>
               </Button>
@@ -183,7 +183,7 @@ export function Header() {
                     asChild
                     className="bg-[#FF4500] hover:bg-[#FF6347] text-white w-full"
                   >
-                    <a href="tel:+17084975200">CALL US</a>
+                    <a href="tel:+17735502500">CALL US</a>
                   </Button>
                 </motion.div>
               </div>

@@ -175,9 +175,9 @@ export default function VehicleDetailPage() {
                       variant="outline"
                       className="w-full border-2 border-white text-white hover:bg-white hover:text-black py-6 text-lg rounded-full"
                     >
-                      <a href="tel:+17084975200" className="flex items-center justify-center gap-2">
+                      <a href="tel:+17735502500" className="flex items-center justify-center gap-2">
                         <Phone className="h-5 w-5" />
-                        (+1) 708-497-5200
+                        (+1) 773-550-2500
                       </a>
                     </Button>
                   </motion.div>
@@ -188,7 +188,7 @@ export default function VehicleDetailPage() {
                       variant="outline"
                       className="w-full border-2 border-[#FF4500] text-[#FF4500] hover:bg-[#FF4500] hover:text-white py-6 text-lg rounded-full"
                     >
-                      <a href="https://wa.me/17084975200" className="flex items-center justify-center gap-2">
+                      <a href="https://wa.me/17735502500" className="flex items-center justify-center gap-2">
                         <MessageCircle className="h-5 w-5" />
                         WhatsApp
                       </a>
@@ -344,8 +344,8 @@ export default function VehicleDetailPage() {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-full flex items-center gap-2"
                 >
-                  <a href="tel:+17084975200">
-                    (+1) 708-497-5200
+                  <a href="tel:+17735502500">
+                    (+1) 773-550-2500
                     <Phone className="h-5 w-5" />
                   </a>
                 </Button>

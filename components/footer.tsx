@@ -118,8 +118,8 @@ export function Footer() {
                 {
                   icon: Phone,
                   label: "Call Us",
-                  value: "(+1) 708-497-5200",
-                  href: "tel:+17084975200",
+                  value: "(+1) 773-550-2500",
+                  href: "tel:+17735502500",
                 },
                 {
                   icon: Mail,
@@ -130,8 +130,8 @@ export function Footer() {
                 {
                   icon: MapPin,
                   label: "Location",
-                  value: "808 W Higgins Rd 1-b, Park Ridge, IL 60068",
-                  href: "https://www.google.com/maps/dir//808+W+Higgins+Rd+1-+b+Park+Ridge,+IL+60068+USA/@41.9865154,-87.8356541,18z/data=!4m5!4m4!1m0!1m2!1m1!1s0x880fc9f2d17bffff:0xdc1674a2439a00d7",
+                  value: "8536 W Lawrence Ave Norridge IL 60706",
+                  href: "https://www.google.com/maps/search/8536+W+Lawrence+Ave+Norridge+IL+60706",
                 },
               ].map((contact, index) => {
                 const Icon = contact.icon;
@@ -206,7 +206,7 @@ export function Footer() {
               {[
                 {
                   Icon: Map,
-                  href: "https://www.google.com/maps/dir//808+W+Higgins+Rd+1-+b+Park+Ridge,+IL+60068+USA/@41.9865154,-87.8356541,18z/data=!4m5!4m4!1m0!1m2!1m1!1s0x880fc9f2d17bffff:0xdc1674a2439a00d7",
+                  href: "https://www.google.com/maps/search/8536+W+Lawrence+Ave+Norridge+IL+60706",
                   label: "Google Maps",
                 },
                 {

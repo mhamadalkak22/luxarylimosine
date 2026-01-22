@@ -18,7 +18,7 @@ Chicago Luxury Limousine provides premier luxury transportation services in the 
 - **Fully Responsive**: Optimized for mobile, tablet, and desktop
 - **Interactive Fleet Showcase**: Browse our premium vehicle collection
 - **Contact Form**: Easy booking and inquiry system
-- **Google Maps Integration**: Find our location at 808 W Higgins Rd, Park Ridge, IL
+- **Google Maps Integration**: Find our location at 8536 W Lawrence Ave, Norridge, IL 60706
 - **Real-time Animations**: Built with Framer Motion for smooth UX
 
 ## 🛠️ Tech Stack
@@ -32,12 +32,12 @@ Chicago Luxury Limousine provides premier luxury transportation services in the 
 
 ## 📍 Location
 
-808 W Higgins Rd 1-b  
-Park Ridge, IL 60068, USA
+8536 W Lawrence Ave
+Norridge, IL 60706, USA
 
 ## 📞 Contact
 
-- **Phone**: (+1) 708-497-5200
+- **Phone**: (+1) 773-550-2500
 - **Email**: Limoride247@gmail.com
 - **Website**: [Coming Soon]
 
@@ -103,7 +103,7 @@ npm start
 - [Facebook](https://www.facebook.com/ChicagoLuxuryLimousine/)
 - [Instagram](https://www.instagram.com/chicago.luxury.limousine/)
 - [TikTok](https://www.tiktok.com/@chicago.luxury.li)
-- [Google Maps](https://www.google.com/maps/dir//808+W+Higgins+Rd+1-+b+Park+Ridge,+IL+60068+USA/@41.9865154,-87.8356541,18z)
+- [Google Maps](https://www.google.com/maps/search/8536+W+Lawrence+Ave+Norridge+IL+60706)
 
 ## 📝 License
 
