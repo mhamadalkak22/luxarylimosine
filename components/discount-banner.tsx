@@ -41,7 +41,7 @@ export function DiscountBanner({ isVisible, onClose }: DiscountBannerProps) {
               </motion.span>
               <Percent className="h-5 w-5 md:h-6 md:w-6 text-yellow-300" />
               <span className="text-sm md:text-base font-medium">
-                on all bookings - Limited Time Offer!
+                discount for first-time from and to airport transfers
               </span>
             </div>
 
