@@ -32,16 +32,16 @@ export function DiscountBanner({ isVisible, onClose }: DiscountBannerProps) {
 
             {/* Discount Text */}
             <div className="flex items-center gap-2 flex-wrap justify-center">
-              <motion.span
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="font-bold text-lg md:text-xl"
-              >
-                20% OFF
-              </motion.span>
-              <Percent className="h-5 w-5 md:h-6 md:w-6 text-yellow-300" />
               <span className="text-sm md:text-base font-medium">
-                discount for first-time from and to airport transfers
+                Enjoy{" "}
+                <motion.span
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="font-bold text-lg md:text-xl"
+                >
+                  20% OFF
+                </motion.span>
+                {" "}your first ride from & to the airport!
               </span>
             </div>
 

@@ -164,7 +164,18 @@ export default function VehicleDetailPage() {
                       onClick={() => setIsBookingModalOpen(true)}
                       className="w-full bg-[#FF4500] hover:bg-[#FF6347] text-white py-6 text-lg rounded-full"
                     >
-                      GET A QUOTE
+                      <motion.span
+                        animate={{ 
+                          color: ["#FFFFFF", "#FF0000", "#FFFFFF"]
+                        }}
+                        transition={{ 
+                          duration: 1.5, 
+                          repeat: Infinity, 
+                          ease: "easeInOut" 
+                        }}
+                      >
+                        GET A QUOTE
+                      </motion.span>
                       <MessageCircle className="h-5 w-5 ml-2" />
                     </Button>
                   </motion.div>

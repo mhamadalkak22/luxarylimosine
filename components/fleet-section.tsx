@@ -21,7 +21,7 @@ const fleetData = [
   {
     name: "Lincoln Navigator",
     type: "SUV",
-    image: "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
+    image: "/Lincoln Navigator.jpeg",
     modelYear: "New Model",
     seating: 6,
     slug: "lincoln-navigator",
@@ -30,7 +30,7 @@ const fleetData = [
   {
     name: "Chevy Suburban",
     type: "SUV",
-    image: "/car/car/Chevy Suburban/MYXJ_20260112173304554_save.jpg",
+    image: "/Chevy Suburban 2025.jpeg",
     modelYear: "New Model",
     seating: 6,
     slug: "chevy-suburban",
@@ -157,7 +157,19 @@ export function FleetSection() {
                     <Button asChild className="w-full bg-transparent border-2 border-white hover:bg-[#FF4500] hover:border-[#FF4500] text-white group/btn">
                       <a href={`/fleet/${vehicle.slug}`}>
                         <span className="flex items-center justify-between w-full">
-                          <span className="font-bold text-lg">GET A QUOTE</span>
+                          <motion.span 
+                            className="font-bold text-lg"
+                            animate={{ 
+                              color: ["#FFFFFF", "#FF0000", "#FFFFFF"]
+                            }}
+                            transition={{ 
+                              duration: 1.5, 
+                              repeat: Infinity, 
+                              ease: "easeInOut" 
+                            }}
+                          >
+                            GET A QUOTE
+                          </motion.span>
                           <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
                         </span>
                       </a>
