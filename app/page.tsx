@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
@@ -11,6 +14,7 @@ import { FloatingBookingButton } from "@/components/floating-booking-button"
 import { DiscountBanner } from "@/components/discount-banner"
 
 export default function Home() {
+  const [isBannerVisible, setIsBannerVisible] = useState(true);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -107,10 +111,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <DiscountBanner />
+      <DiscountBanner onClose={() => setIsBannerVisible(false)} isVisible={isBannerVisible} />
       <main className="min-h-screen">
-        <Header />
-        <HeroSection />
+        <Header bannerVisible={isBannerVisible} />
+        <HeroSection bannerVisible={isBannerVisible} />
         <AboutSection />
         <ServicesSection />
         <FleetSection />

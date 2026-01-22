@@ -8,16 +8,7 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 const fleetData = [
-  // 1. SUV - Lincoln Navigator
-  {
-    name: "Lincoln Navigator",
-    type: "SUV",
-    image: "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
-    modelYear: "New Model",
-    seating: 6,
-    slug: "lincoln-navigator",
-  },
-  // 2. SUV - Cadillac Escalade
+  // 1. SUV - Cadillac Escalade
   {
     name: "Cadillac Escalade",
     type: "SUV",
@@ -25,6 +16,15 @@ const fleetData = [
     modelYear: "2025",
     seating: 6,
     slug: "cadillac-escalade",
+  },
+  // 2. SUV - Lincoln Navigator
+  {
+    name: "Lincoln Navigator",
+    type: "SUV",
+    image: "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
+    modelYear: "New Model",
+    seating: 6,
+    slug: "lincoln-navigator",
   },
   // 3. SUV - Chevy Suburban
   {

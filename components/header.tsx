@@ -6,7 +6,11 @@ import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function Header() {
+interface HeaderProps {
+  bannerVisible?: boolean;
+}
+
+export function Header({ bannerVisible = false }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -15,7 +19,9 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
-      className="fixed top-[52px] left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10"
+      className={`fixed left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10 transition-all duration-300 ${
+        bannerVisible ? "top-[52px]" : "top-0"
+      }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">

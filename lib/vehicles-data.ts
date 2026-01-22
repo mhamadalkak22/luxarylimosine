@@ -17,29 +17,6 @@ export interface VehicleDetails {
 export const vehiclesData: VehicleDetails[] = [
   // SUVs - 3 vehicles
   {
-    name: "Lincoln Navigator",
-    slug: "lincoln-navigator",
-    type: "SUV",
-    modelYear: "New Model",
-    seating: 6,
-    mainImage: "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
-    images: [
-      "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
-      "/car/car/Lincoln Navigator/MYXJ_20260112173058247_save.jpg",
-      "/car/car/Lincoln Navigator/MYXJ_20260112173119751_save.jpg",
-    ],
-    wifi: true,
-    climateControl: "Tri-Zone Automatic",
-    idealFor: ["Family airport pickups", "Business guests", "Wedding parties"],
-    features: [
-      "Seating Capacity: 6 passengers",
-      "Captain chairs, customizable ambient lighting, advanced noise reduction",
-      "Interior: Captain chairs, customizable ambient lighting, advanced noise reduction",
-    ],
-    description: "Elegant, spacious, and packed with technology.",
-    tagline: "Powerful Conveyance",
-  },
-  {
     name: "Cadillac Escalade",
     slug: "cadillac-escalade",
     type: "SUV",
@@ -61,6 +38,29 @@ export const vehiclesData: VehicleDetails[] = [
     ],
     description: "The pinnacle of American luxury and performance.",
     tagline: "Executive Elegance",
+  },
+  {
+    name: "Lincoln Navigator",
+    slug: "lincoln-navigator",
+    type: "SUV",
+    modelYear: "New Model",
+    seating: 6,
+    mainImage: "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
+    images: [
+      "/car/car/Lincoln Navigator/MYXJ_20260112173034058_save.jpg",
+      "/car/car/Lincoln Navigator/MYXJ_20260112173058247_save.jpg",
+      "/car/car/Lincoln Navigator/MYXJ_20260112173119751_save.jpg",
+    ],
+    wifi: true,
+    climateControl: "Tri-Zone Automatic",
+    idealFor: ["Family airport pickups", "Business guests", "Wedding parties"],
+    features: [
+      "Seating Capacity: 6 passengers",
+      "Captain chairs, customizable ambient lighting, advanced noise reduction",
+      "Interior: Captain chairs, customizable ambient lighting, advanced noise reduction",
+    ],
+    description: "Elegant, spacious, and packed with technology.",
+    tagline: "Powerful Conveyance",
   },
   {
     name: "Chevy Suburban",

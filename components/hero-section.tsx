@@ -5,9 +5,15 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { AnimatedBackground } from "./animated-background"
 
-export function HeroSection() {
+interface HeroSectionProps {
+  bannerVisible?: boolean;
+}
+
+export function HeroSection({ bannerVisible = false }: HeroSectionProps) {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
+    <section id="home" className={`relative min-h-screen flex items-center justify-center overflow-hidden transition-all duration-300 ${
+      bannerVisible ? "pt-32" : "pt-20"
+    }`}>
       {/* Background Image */}
       <motion.div
         initial={{ scale: 1.2, opacity: 0 }}

@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Percent, Sparkles } from "lucide-react";
 
-export function DiscountBanner() {
-  const [isVisible, setIsVisible] = useState(true);
+interface DiscountBannerProps {
+  isVisible: boolean;
+  onClose: () => void;
+}
 
+export function DiscountBanner({ isVisible, onClose }: DiscountBannerProps) {
   if (!isVisible) return null;
 
   return (
@@ -45,7 +47,7 @@ export function DiscountBanner() {
 
             {/* Close Button */}
             <button
-              onClick={() => setIsVisible(false)}
+              onClick={onClose}
               className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 hover:bg-white/20 rounded-full p-1 transition-all"
               aria-label="Close banner"
             >
