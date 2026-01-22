@@ -12,7 +12,7 @@ const fleetData = [
   {
     name: "Cadillac Escalade",
     type: "SUV",
-    image: "/car/car/Cadaliac Escalade/MYXJ_20260112173138965_save.jpg",
+    image: "/Cadaliac Escalade.jpeg",
     modelYear: "2025",
     seating: 6,
     slug: "cadillac-escalade",
