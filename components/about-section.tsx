@@ -54,7 +54,7 @@ export function AboutSection() {
               className="relative rounded-[200px] overflow-hidden h-[600px] bg-gradient-to-br from-orange-400 via-orange-300 to-yellow-200"
             >
               <img
-                src="/range.jpeg"
+                src="/Cadaliac Escalade.jpeg"
                 alt="Luxury Cadillac Escalade"
                 className="w-full h-full object-cover"
               />

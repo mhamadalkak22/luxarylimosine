@@ -226,7 +226,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
-                    className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                    className="bg-white/25 border border-white/30 placeholder:text-white/70 focus:border-[#FF4500] focus:ring-2 focus:ring-[#FF4500]/40 h-12 text-white"
                   />
                 </motion.div>
 
@@ -245,7 +245,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       placeholder="john@example.com"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      className="bg-white/25 border border-white/30 placeholder:text-white/70 focus:border-[#FF4500] focus:ring-2 focus:ring-[#FF4500]/40 h-12 text-white"
                     />
                   </div>
                   <div>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       placeholder="+1 (555) 000-0000"
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      className="bg-white/25 border border-white/30 placeholder:text-white/70 focus:border-[#FF4500] focus:ring-2 focus:ring-[#FF4500]/40 h-12 text-white"
                     />
                   </div>
                 </motion.div>
@@ -275,7 +275,7 @@ export default function ContactPage() {
                       value={formData.service}
                       onChange={handleChange}
                       required
-                      className="w-full bg-black border border-zinc-700 rounded-md h-12 px-3 text-white focus:border-[#FF4500] focus:outline-none focus:ring-2 focus:ring-[#FF4500]/20"
+                      className="w-full bg-white/25 border border-white/30 rounded-md h-12 px-3 text-white placeholder:text-white/70 focus:border-[#FF4500] focus:outline-none focus:ring-2 focus:ring-[#FF4500]/40"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -292,7 +292,7 @@ export default function ContactPage() {
                       name="date"
                       value={formData.date}
                       onChange={handleChange}
-                      className="bg-black border-zinc-700 focus:border-[#FF4500] h-12 text-white"
+                      className="bg-white/25 border border-white/30 placeholder:text-white/70 focus:border-[#FF4500] focus:ring-2 focus:ring-[#FF4500]/40 h-12 text-white"
                     />
                   </div>
                 </motion.div>
@@ -310,7 +310,7 @@ export default function ContactPage() {
                     required
                     placeholder="Tell us about your transportation needs..."
                     rows={6}
-                    className="bg-black border-zinc-700 focus:border-[#FF4500] text-white resize-none"
+                    className="bg-white/25 border border-white/30 placeholder:text-white/70 focus:border-[#FF4500] focus:ring-2 focus:ring-[#FF4500]/40 text-white resize-none"
                   />
                 </motion.div>
 

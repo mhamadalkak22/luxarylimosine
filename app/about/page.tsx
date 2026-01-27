@@ -183,7 +183,7 @@ export default function AboutPage() {
                 className="relative rounded-3xl overflow-hidden h-[600px]"
               >
                 <img
-                  src="/liconabout.png"
+                  src="/Cadaliac Escalade.jpeg"
                   alt="Luxury Vehicle"
                   className="w-full h-full object-cover"
                 />
