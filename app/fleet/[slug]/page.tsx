@@ -2,7 +2,17 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, Calendar, Users, Wifi, Wind, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Phone,
+  MessageCircle,
+  Calendar,
+  Users,
+  Wifi,
+  Wind,
+  ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -28,7 +38,9 @@ export default function VehicleDetailPage() {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + vehicle.images.length) % vehicle.images.length);
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + vehicle.images.length) % vehicle.images.length,
+    );
   };
 
   return (
@@ -130,7 +142,9 @@ export default function VehicleDetailPage() {
                       <Calendar className="h-5 w-5" />
                       Model Year
                     </span>
-                    <span className="font-semibold text-lg">{vehicle.modelYear}</span>
+                    <span className="font-semibold text-lg">
+                      {vehicle.modelYear}
+                    </span>
                   </div>
 
                   <div className="flex items-center justify-between py-3 border-b border-zinc-800">
@@ -138,7 +152,9 @@ export default function VehicleDetailPage() {
                       <Users className="h-5 w-5" />
                       Seating Capacity
                     </span>
-                    <span className="font-semibold text-lg">{vehicle.seating}</span>
+                    <span className="font-semibold text-lg">
+                      {vehicle.seating}
+                    </span>
                   </div>
 
                   <div className="flex items-center justify-between py-3 border-b border-zinc-800">
@@ -146,7 +162,9 @@ export default function VehicleDetailPage() {
                       <Wifi className="h-5 w-5" />
                       Wi-Fi
                     </span>
-                    <span className="font-semibold text-lg">{vehicle.wifi ? "Yes" : "No"}</span>
+                    <span className="font-semibold text-lg">
+                      {vehicle.wifi ? "Yes" : "No"}
+                    </span>
                   </div>
 
                   <div className="flex items-center justify-between py-3 border-b border-zinc-800">
@@ -154,24 +172,29 @@ export default function VehicleDetailPage() {
                       <Wind className="h-5 w-5" />
                       Climate Control
                     </span>
-                    <span className="font-semibold text-lg">{vehicle.climateControl}</span>
+                    <span className="font-semibold text-lg">
+                      {vehicle.climateControl}
+                    </span>
                   </div>
                 </div>
 
                 <div className="pt-6 space-y-4">
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
                     <Button
                       onClick={() => setIsBookingModalOpen(true)}
                       className="w-full bg-[#FF4500] hover:bg-[#FF6347] text-white py-6 text-lg rounded-full"
                     >
                       <motion.span
-                        animate={{ 
-                          color: ["#FFFFFF", "#FF0000", "#FFFFFF"]
+                        animate={{
+                          color: ["#FFFFFF", "#FF0000", "#FFFFFF"],
                         }}
-                        transition={{ 
-                          duration: 1.5, 
-                          repeat: Infinity, 
-                          ease: "easeInOut" 
+                        transition={{
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
                         }}
                       >
                         GET A QUOTE
@@ -180,26 +203,38 @@ export default function VehicleDetailPage() {
                     </Button>
                   </motion.div>
 
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
                     <Button
                       asChild
                       variant="outline"
                       className="w-full border-2 border-white text-white hover:bg-white hover:text-black py-6 text-lg rounded-full"
                     >
-                      <a href="tel:+17735502500" className="flex items-center justify-center gap-2">
+                      <a
+                        href="tel:+17735502500"
+                        className="flex items-center justify-center gap-2"
+                      >
                         <Phone className="h-5 w-5" />
                         (+1) 773-550-2500
                       </a>
                     </Button>
                   </motion.div>
 
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
                     <Button
                       asChild
                       variant="outline"
                       className="w-full border-2 border-[#FF4500] text-[#FF4500] hover:bg-[#FF4500] hover:text-white py-6 text-lg rounded-full"
                     >
-                      <a href="https://wa.me/17735502500" className="flex items-center justify-center gap-2">
+                      <a
+                        href="https://wa.me/17735502500"
+                        className="flex items-center justify-center gap-2"
+                      >
                         <MessageCircle className="h-5 w-5" />
                         WhatsApp
                       </a>
@@ -220,7 +255,7 @@ export default function VehicleDetailPage() {
               <div className="relative bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800">
                 <div className="relative aspect-[4/3]">
                   <img
-                    src={vehicle.images[currentImageIndex]}
+                    src={encodeURI(vehicle.images[currentImageIndex])}
                     alt={`${vehicle.name} - Image ${currentImageIndex + 1}`}
                     className="w-full h-full object-cover"
                   />
@@ -267,7 +302,9 @@ export default function VehicleDetailPage() {
                   <div className="h-1 w-12 bg-[#FF4500]" />
                   <h2 className="text-2xl font-bold">Powerful Conveyance</h2>
                 </div>
-                <p className="text-xl text-gray-300 leading-relaxed mb-6">{vehicle.description}</p>
+                <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                  {vehicle.description}
+                </p>
 
                 {/* Ideal For */}
                 <div className="mb-6">
@@ -276,7 +313,10 @@ export default function VehicleDetailPage() {
                   </h3>
                   <ul className="space-y-2">
                     {vehicle.idealFor.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-300">
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-gray-300"
+                      >
                         <span className="text-[#FF4500] mt-1">•</span>
                         {item}
                       </li>
@@ -291,7 +331,10 @@ export default function VehicleDetailPage() {
                   </h3>
                   <ul className="space-y-2">
                     {vehicle.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-300">
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-gray-300"
+                      >
                         <span className="text-[#FF4500] mt-1">•</span>
                         {feature}
                       </li>
@@ -333,11 +376,15 @@ export default function VehicleDetailPage() {
               <span className="text-[#FF4500]">This Vehicle?</span>
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Contact us today to reserve your {vehicle.name} and travel in style
+              Contact us today to reserve your {vehicle.name} and travel in
+              style
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   asChild
                   className="bg-[#FF4500] hover:bg-[#FF6347] text-white px-8 py-6 text-lg rounded-full flex items-center gap-2"
@@ -349,7 +396,10 @@ export default function VehicleDetailPage() {
                 </Button>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   asChild
                   variant="outline"

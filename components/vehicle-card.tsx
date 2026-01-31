@@ -1,23 +1,36 @@
-"use client"
+"use client";
 
-import { Calendar, Users, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { motion } from "framer-motion"
+import { Calendar, Users, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 interface VehicleCardProps {
-  name: string
-  type: "SUV" | "LIMO" | "BUSS"
-  image: string
-  modelYear: string
-  seating: number | string
-  index: number
-  slug?: string
+  name: string;
+  type: "SUV" | "LIMO" | "BUSS";
+  image: string;
+  modelYear: string;
+  seating: number | string;
+  index: number;
+  slug?: string;
 }
 
-export function VehicleCard({ name, type, image, modelYear, seating, index, slug }: VehicleCardProps) {
+export function VehicleCard({
+  name,
+  type,
+  image,
+  modelYear,
+  seating,
+  index,
+  slug,
+}: VehicleCardProps) {
   // Generate slug from name if not provided
-  const vehicleSlug = slug || name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const vehicleSlug =
+    slug ||
+    name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -31,7 +44,7 @@ export function VehicleCard({ name, type, image, modelYear, seating, index, slug
           <motion.img
             whileHover={{ scale: 1.15, rotate: 2 }}
             transition={{ duration: 0.5 }}
-            src={image}
+            src={encodeURI(image)}
             alt={name}
             className="w-full h-full object-cover"
           />
@@ -77,18 +90,21 @@ export function VehicleCard({ name, type, image, modelYear, seating, index, slug
             </motion.div>
           </div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button asChild className="w-full bg-transparent border-2 border-white hover:bg-[#FF4500] hover:border-[#FF4500] text-white group/btn">
+            <Button
+              asChild
+              className="w-full bg-transparent border-2 border-white hover:bg-[#FF4500] hover:border-[#FF4500] text-white group/btn"
+            >
               <a href={`/fleet/${vehicleSlug}`}>
                 <span className="flex items-center justify-between w-full">
-                  <motion.span 
+                  <motion.span
                     className="font-bold text-lg"
-                    animate={{ 
-                      color: ["#FFFFFF", "#FF0000", "#FFFFFF"]
+                    animate={{
+                      color: ["#FFFFFF", "#FF0000", "#FFFFFF"],
                     }}
-                    transition={{ 
-                      duration: 1.5, 
-                      repeat: Infinity, 
-                      ease: "easeInOut" 
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
                     }}
                   >
                     GET A QUOTE
@@ -101,5 +117,5 @@ export function VehicleCard({ name, type, image, modelYear, seating, index, slug
         </div>
       </Card>
     </motion.div>
-  )
+  );
 }

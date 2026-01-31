@@ -101,7 +101,11 @@ export const vehiclesData: VehicleDetails[] = [
     ],
     wifi: true,
     climateControl: "Multi-Zone Automatic",
-    idealFor: ["Bachelor/Bachelorette parties", "Prom nights", "Night out events"],
+    idealFor: [
+      "Bachelor/Bachelorette parties",
+      "Prom nights",
+      "Night out events",
+    ],
     features: [
       "Seating Capacity: 18 passengers",
       "Premium sound system, LED lighting, bar area",
@@ -117,11 +121,7 @@ export const vehiclesData: VehicleDetails[] = [
     modelYear: "New Model",
     seating: 16,
     mainImage: "/car/lincon.jpeg",
-    images: [
-      "/car/lincon.jpeg",
-      "/car/lincon1.jpeg",
-      "/car/lincon2.jpeg",
-    ],
+    images: ["/car/lincon.jpeg", "/car/lincon1.jpeg", "/car/lincon2.jpeg"],
     wifi: true,
     climateControl: "Multi-Zone Automatic",
     idealFor: ["Wedding parties", "Corporate events", "Special celebrations"],
@@ -164,9 +164,9 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 10,
-    mainImage: "/car/car/Mercedesexecutivestyle.jpeg",
+    mainImage: "/car//car/Mercedesexecutivestyle.jpeg",
     images: [
-      "/car/car/Mercedesexecutivestyle.jpeg",
+      "/car//car/Mercedesexecutivestyle.jpeg",
       "/car/car/Mercedesexecutivestyle1.jpeg",
       "/car/car/Mercedesexecutivestyle2.jpeg",
     ],
@@ -187,11 +187,11 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 15,
-    mainImage: "/car/car/Mercedeslimostyle.jpeg",
+    mainImage: "/car/car/Mercedes – Limo Style/MYXJ_20260112173844726_save.jpg",
     images: [
-      "/car/car/Mercedeslimostyle.jpeg",
-      "/car/car/Mercedeslimostyle1.jpeg",
-      "/car/car/Mercedeslimostyle2.jpeg",
+      "/car/car/Mercedes – Limo Style/MYXJ_20260112173844726_save.jpg",
+      "/car/car/Mercedes – Limo Style/MYXJ_20260112173907344_save.jpg",
+      "/car/car/Mercedes – Limo Style/MYXJ_20260112173925410_save.jpg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
@@ -235,7 +235,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 22,
-    mainImage: "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174041693_save.jpg",
+    mainImage:
+      "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174041693_save.jpg",
     images: [
       "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174041693_save.jpg",
       "/car/car/22 FORD party BUS – Shuttle Style/MYXJ_20260112174056353_save.jpg",
@@ -243,7 +244,11 @@ export const vehiclesData: VehicleDetails[] = [
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
-    idealFor: ["Large group events", "Company outings", "Concert transportation"],
+    idealFor: [
+      "Large group events",
+      "Company outings",
+      "Concert transportation",
+    ],
     features: [
       "Seating Capacity: 22 passengers",
       "Spacious interior, entertainment system, LED lighting",
@@ -258,7 +263,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "LIMO",
     modelYear: "New Model",
     seating: 22,
-    mainImage: "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174134252_save.jpg",
+    mainImage:
+      "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174134252_save.jpg",
     images: [
       "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174134252_save.jpg",
       "/car/car/22 FORD party BUS – Limo Style/MYXJ_20260112174152830_save.jpg",
@@ -281,7 +287,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 28,
-    mainImage: "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174222932_save.jpg",
+    mainImage:
+      "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174222932_save.jpg",
     images: [
       "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174222932_save.jpg",
       "/car/car/FORD party BUS – Limo Style/MYXJ_20260112174306923_save.jpg",
@@ -306,7 +313,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 28,
-    mainImage: "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174352589_save.jpg",
+    mainImage:
+      "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174352589_save.jpg",
     images: [
       "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174352589_save.jpg",
       "/car/car/Mercedes Benz Freightliner – Limo Style/MYXJ_20260112174411688_save.jpg",
@@ -329,7 +337,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: "35-45",
-    mainImage: "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174443926_save.jpg",
+    mainImage:
+      "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174443926_save.jpg",
     images: [
       "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174443926_save.jpg",
       "/car/car/Mercedes Benz Freightliner – Limo Style2/MYXJ_20260112174457566_save.jpg",
@@ -352,7 +361,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: "35-45",
-    mainImage: "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174535953_save.jpg",
+    mainImage:
+      "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174535953_save.jpg",
     images: [
       "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174535953_save.jpg",
       "/car/car/Mercedes Benz Freightliner -Shuttle Style3/MYXJ_20260112174659919_save.jpg",
@@ -360,7 +370,11 @@ export const vehiclesData: VehicleDetails[] = [
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
-    idealFor: ["Convention shuttles", "Corporate transfers", "Large group transport"],
+    idealFor: [
+      "Convention shuttles",
+      "Corporate transfers",
+      "Large group transport",
+    ],
     features: [
       "Seating Capacity: 35-45 passengers",
       "Comfortable shuttle seating, luggage storage, amenities",

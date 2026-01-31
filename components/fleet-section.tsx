@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Calendar, Users, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { Calendar, Users, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const fleetData = [
   // 1. SUV - Cadillac Escalade
@@ -35,14 +35,18 @@ const fleetData = [
     seating: 6,
     slug: "chevy-suburban",
   },
-]
+];
 
 export function FleetSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="fleet" className="py-20 bg-black relative overflow-hidden" ref={ref}>
+    <section
+      id="fleet"
+      className="py-20 bg-black relative overflow-hidden"
+      ref={ref}
+    >
       <motion.div
         animate={{
           x: [0, 150, 0],
@@ -82,7 +86,11 @@ export function FleetSection() {
           <p className="text-[#FF4500] font-semibold mb-4 flex items-center justify-center gap-2">
             <motion.span
               animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+              transition={{
+                duration: 2,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "linear",
+              }}
               className="text-2xl"
             >
               ✱
@@ -110,7 +118,11 @@ export function FleetSection() {
                   <motion.img
                     whileHover={{ scale: 1.15, rotate: 2 }}
                     transition={{ duration: 0.5 }}
-                    src={vehicle.image || "/placeholder.svg"}
+                    src={
+                      vehicle.image
+                        ? encodeURI(vehicle.image)
+                        : "/placeholder.svg"
+                    }
                     alt={vehicle.name}
                     className="w-full h-full object-cover"
                   />
@@ -153,19 +165,25 @@ export function FleetSection() {
                       <span className="font-semibold">{vehicle.seating}</span>
                     </motion.div>
                   </div>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button asChild className="w-full bg-transparent border-2 border-white hover:bg-[#FF4500] hover:border-[#FF4500] text-white group/btn">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Button
+                      asChild
+                      className="w-full bg-transparent border-2 border-white hover:bg-[#FF4500] hover:border-[#FF4500] text-white group/btn"
+                    >
                       <a href={`/fleet/${vehicle.slug}`}>
                         <span className="flex items-center justify-between w-full">
-                          <motion.span 
+                          <motion.span
                             className="font-bold text-lg"
-                            animate={{ 
-                              color: ["#FFFFFF", "#FF0000", "#FFFFFF"]
+                            animate={{
+                              color: ["#FFFFFF", "#FF0000", "#FFFFFF"],
                             }}
-                            transition={{ 
-                              duration: 1.5, 
-                              repeat: Infinity, 
-                              ease: "easeInOut" 
+                            transition={{
+                              duration: 1.5,
+                              repeat: Infinity,
+                              ease: "easeInOut",
                             }}
                           >
                             GET A QUOTE
@@ -182,5 +200,5 @@ export function FleetSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
