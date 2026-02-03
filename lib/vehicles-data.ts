@@ -314,7 +314,7 @@ export const vehiclesData: VehicleDetails[] = [
     seating: 28,
     mainImage: "/car/FORDpartyBUSLimoStyle.jpeg",
     images: [
-      "/car/FORDPartyBUSLimoStyle.jpeg",
+      "/car/FORDpartyBUSLimoStyle.jpeg",
       "/car/FORDpartyBUSLimoStyle1.jpeg",
       "/car/FORDpartyBUSLimoStyle2.jpeg",
     ],
