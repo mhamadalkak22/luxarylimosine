@@ -330,52 +330,64 @@ export const vehiclesData: VehicleDetails[] = [
     tagline: "Mega Party",
   },
 
-  // Mercedes Benz Freightliner - 3 vehicles
+  // Mercedes Benz Freightliner - 2 vehicles (Limo Style, Limo Style 35-45)
   {
-    name: "Mercedes Benz Freightliner – Limo Style",
-    slug: "mercedes-benz-freightliner-limo-style-28",
+    name: "32 Passenger Mercedes Freightliner Party Bus",
+    slug: "32-passenger-mercedes-freightliner-party-bus",
     type: "BUSS",
     modelYear: "New Model",
-    seating: 28,
+    seating: 32,
     mainImage: "/car/bus32.webp",
     images: [
       "/car/bus32.webp",
-      "/car/MercedesBenzFreightlinerLimoStyle1.jpeg",
-      "/car/MercedesBenzFreightlinerLimoStyle2.jpeg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
-    idealFor: ["Large weddings", "Corporate events", "Festival transportation"],
-    features: [
-      "Seating Capacity: 28 passengers",
-      "Luxury bus interior, premium amenities, entertainment",
-      "Interior: Club-style seating, lighting, sound system",
+    idealFor: [
+      "Large weddings",
+      "Corporate parties",
+      "Festival transportation",
+      "Night out events",
     ],
-    description: "Luxury coach with limousine-style amenities.",
-    tagline: "Coach Luxury",
+    features: [
+      "Seating Capacity: 32 passengers",
+      "Great 15,000 Watt Sound System",
+      "4 Power Amplifiers",
+      "4 Sub Woofers, 8 Speakers",
+      "Interior: Club-style seating, premium lighting, entertainment",
+    ],
+    description:
+      "32 passenger Mercedes Freightliner party bus with a powerful 15,000 watt sound system, 4 power amplifiers, 4 sub woofers, and 8 speakers for the ultimate party on wheels.",
+    tagline: "Party Bus Luxury",
   },
   {
-    name: "Mercedes Benz Freightliner – Limo Style 35-45",
-    slug: "mercedes-benz-freightliner-limo-style-35-45",
+    name: "25 Passenger GMC Party Bus",
+    slug: "25-passenger-gmc-party-bus",
     type: "BUSS",
     modelYear: "New Model",
-    seating: "35-45",
+    seating: 25,
     mainImage: "/car/bus32.webp",
     images: [
       "/car/bus32.webp",
-      "/car/MercedesBenzFreightlinerLimoStyle35451.jpeg",
-      "/car/MercedesBenzFreightlinerLimoStyle35452.jpeg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
-    idealFor: ["Convention groups", "Large corporate events", "Tour groups"],
-    features: [
-      "Seating Capacity: 35-45 passengers",
-      "Spacious luxury interior, premium features, entertainment",
-      "Interior: Comfortable seating, climate control, multimedia",
+    idealFor: [
+      "Bachelor/Bachelorette parties",
+      "Corporate events",
+      "Night out events",
+      "Concert transportation",
     ],
-    description: "Premium capacity for large group luxury travel.",
-    tagline: "Large Group Luxury",
+    features: [
+      "Seating Capacity: 25 passengers",
+      "Great 12,000 Watt Sound System",
+      "2 Power Amplifiers",
+      "3 Sub Woofers, 8 Speakers",
+      "Interior: Club-style seating, premium lighting, entertainment",
+    ],
+    description:
+      "25 passenger GMC party bus with a powerful 12,000 watt sound system, 2 power amplifiers, 3 sub woofers, and 8 speakers for an unforgettable party on wheels.",
+    tagline: "Party Bus Excellence",
   },
 
   // Mercedes Benz Freightliner - 2 vehicles (Shuttle Style moved to Mercedes Sprinter Vans)
