@@ -176,7 +176,7 @@ export default function FleetPage() {
             </div>
           </motion.div>
 
-          {/* Mercedes Sprinters - 3 vehicles */}
+          {/* Mercedes Sprinters - 4 vehicles (incl. Mercedes Benz Freightliner - Shuttle Style) */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -189,8 +189,8 @@ export default function FleetPage() {
                 Mercedes Sprinter Vans
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {vehicles.slice(6, 9).map((vehicle, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {vehicles.slice(6, 10).map((vehicle, index) => (
                 <VehicleCard
                   key={vehicle.slug}
                   {...vehicle}
@@ -214,17 +214,17 @@ export default function FleetPage() {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {vehicles.slice(9, 12).map((vehicle, index) => (
+              {vehicles.slice(10, 13).map((vehicle, index) => (
                 <VehicleCard
                   key={vehicle.slug}
                   {...vehicle}
-                  index={index + 9}
+                  index={index + 10}
                 />
               ))}
             </div>
           </motion.div>
 
-          {/* Mercedes Benz Freightliner - 3 vehicles */}
+          {/* Mercedes Benz Freightliner - 2 vehicles */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -238,11 +238,11 @@ export default function FleetPage() {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {vehicles.slice(12, 15).map((vehicle, index) => (
+              {vehicles.slice(13, 15).map((vehicle, index) => (
                 <VehicleCard
                   key={vehicle.slug}
                   {...vehicle}
-                  index={index + 12}
+                  index={index + 13}
                 />
               ))}
             </div>

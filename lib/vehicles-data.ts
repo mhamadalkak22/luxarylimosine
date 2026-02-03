@@ -157,14 +157,14 @@ export const vehiclesData: VehicleDetails[] = [
     tagline: "Intimate Luxury",
   },
 
-  // Mercedes Sprinters - 3 vehicles
+  // Mercedes Sprinters - 4 vehicles (incl. Mercedes Benz Freightliner - Shuttle Style)
   {
     name: "Mercedes – Executive Style",
     slug: "mercedes-executive-style",
     type: "BUSS",
     modelYear: "New Model",
     seating: 10,
-    mainImage: "/car//car/Mercedesexecutivestyle.jpeg",
+    mainImage: "/car/car/Mercedesexecutivestyle.jpeg",
     images: [
       "/car//car/Mercedesexecutivestyle.jpeg",
       "/car/car/Mercedesexecutivestyle1.jpeg",
@@ -187,11 +187,11 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 15,
-    mainImage: "/car/MercedeslimoStyle.jpeg",
+    mainImage: "/car/car/Mercedesexecutivestyle.jpeg",
     images: [
-      "/car/MercedeslimoStyle.jpeg",
-      "/car/MercedeslimoStyle1.jpeg",
-      "/car/MercedeslimoStyle2.jpeg",
+      "/car/car/Mercedesexecutivestyle.jpeg",
+      "/car/car/Mercedesexecutivestyle1.jpeg",
+      "/car/car/Mercedesexecutivestyle2.jpeg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
@@ -210,11 +210,11 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 15,
-    mainImage: "/car/car/MercedesShuttlestyle.jpeg",
+    mainImage: "/car/car/Mercedesexecutivestyle.jpeg",
     images: [
-      "/car/car/MercedesShuttlestyle.jpeg",
-      "/car/car/MercedesShuttlestyle1.jpeg",
-      "/car/car/MercedesShuttlesstyle2.jpeg",
+      "/car/car/Mercedesexecutivestyle.jpeg",
+      "/car/car/Mercedesexecutivestyle1.jpeg",
+      "/car//mercedesshuttle.jpeg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
@@ -226,6 +226,33 @@ export const vehiclesData: VehicleDetails[] = [
     ],
     description: "Comfortable group transportation with style.",
     tagline: "Shuttle Comfort",
+  },
+  {
+    name: "Mercedes Benz Freightliner - Shuttle Style",
+    slug: "mercedes-benz-freightliner-shuttle-style",
+    type: "BUSS",
+    modelYear: "New Model",
+    seating: "35-45",
+    mainImage: "/car/MercedesBenzFreightlinerShuttleStyle.jpeg",
+    images: [
+      "/car/MercedesBenzFreightlinerShuttleStyle.jpeg",
+      "/car/MercedesBenzFreightlinerShuttleStyle1.jpeg",
+      "/car/MercedesBenzFreightlinerShuttleStyle2.jpeg",
+    ],
+    wifi: true,
+    climateControl: "Automatic Climate Control",
+    idealFor: [
+      "Convention shuttles",
+      "Corporate transfers",
+      "Large group transport",
+    ],
+    features: [
+      "Seating Capacity: 35-45 passengers",
+      "Comfortable shuttle seating, luggage storage, amenities",
+      "Interior: Climate controlled, entertainment, storage",
+    ],
+    description: "Efficient luxury shuttle for large groups.",
+    tagline: "Shuttle Excellence",
   },
 
   // Ford Party Buses - 3 vehicles
@@ -264,9 +291,9 @@ export const vehiclesData: VehicleDetails[] = [
     seating: 22,
     mainImage: "/car/22FORDPartyBUSLimoStyle.jpeg",
     images: [
-      "/car/22 FORD Party BUS Limo Style.jpeg",
-      "/car/22 FORD Party BUS Limo Style1.jpeg",
-      "/car/22 FORD Party BUS Limo Style2.jpeg",
+      "/car/22FORDPartyBUSLimoStyle.jpeg",
+      "/car/22FORDPartyBUSLimoStyle1.jpeg",
+      "/car/22FORDPartyBUSLimoStyle2.jpeg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
@@ -287,7 +314,7 @@ export const vehiclesData: VehicleDetails[] = [
     seating: 28,
     mainImage: "/car/FORDpartyBUSLimoStyle.jpeg",
     images: [
-      "/car/FORDpartyBUSLimoStyle.jpeg",
+      "/car/FORDPartyBUSLimoStyle.jpeg",
       "/car/FORDpartyBUSLimoStyle1.jpeg",
       "/car/FORDpartyBUSLimoStyle2.jpeg",
     ],
@@ -310,9 +337,9 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 28,
-    mainImage: "/car/MercedesBenzFreightlinerLimoStyle.jpeg",
+    mainImage: "/car/bus32.webp",
     images: [
-      "/car/MercedesBenzFreightlinerLimoStyle.jpeg",
+      "/car/bus32.webp",
       "/car/MercedesBenzFreightlinerLimoStyle1.jpeg",
       "/car/MercedesBenzFreightlinerLimoStyle2.jpeg",
     ],
@@ -333,9 +360,9 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: "35-45",
-    mainImage: "/car/MercedesBenzFreightlinerLimoStyle3545.jpeg",
+    mainImage: "/car/bus32.webp",
     images: [
-      "/car/MercedesBenzFreightlinerShuttleStyle.jpeg",
+      "/car/bus32.webp",
       "/car/MercedesBenzFreightlinerLimoStyle35451.jpeg",
       "/car/MercedesBenzFreightlinerLimoStyle35452.jpeg",
     ],
@@ -350,33 +377,8 @@ export const vehiclesData: VehicleDetails[] = [
     description: "Premium capacity for large group luxury travel.",
     tagline: "Large Group Luxury",
   },
-  {
-    name: "Mercedes Benz Freightliner - Shuttle Style",
-    slug: "mercedes-benz-freightliner-shuttle-style",
-    type: "BUSS",
-    modelYear: "New Model",
-    seating: "35-45",
-    mainImage: "/car/MercedesBenzFreightlinerShuttleStyle.jpeg",
-    images: [
-      "/car/MercedesBenzFreightlinerShuttleStyle.jpeg",
-      "/car/MercedesBenzFreightlinerShuttleStyle1.jpeg",
-      "/car/MercedesBenzFreightlinerShuttleStyle2.jpeg",
-    ],
-    wifi: true,
-    climateControl: "Automatic Climate Control",
-    idealFor: [
-      "Convention shuttles",
-      "Corporate transfers",
-      "Large group transport",
-    ],
-    features: [
-      "Seating Capacity: 35-45 passengers",
-      "Comfortable shuttle seating, luggage storage, amenities",
-      "Interior: Climate controlled, entertainment, storage",
-    ],
-    description: "Efficient luxury shuttle for large groups.",
-    tagline: "Shuttle Excellence",
-  },
+
+  // Mercedes Benz Freightliner - 2 vehicles (Shuttle Style moved to Mercedes Sprinter Vans)
 
   // Luxury Coach Buses - 3 vehicles
   {
