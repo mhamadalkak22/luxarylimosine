@@ -337,10 +337,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 32,
-    mainImage: "/car/bus32.webp",
-    images: [
-      "/car/bus32.webp",
-    ],
+    mainImage: "/car/bus0.jpeg",
+    images: ["/car/bus0.jpeg", "/car/bus00.jpeg", "/car/bus000.jpeg"],
     wifi: true,
     climateControl: "Automatic Climate Control",
     idealFor: [
@@ -366,10 +364,8 @@ export const vehiclesData: VehicleDetails[] = [
     type: "BUSS",
     modelYear: "New Model",
     seating: 25,
-    mainImage: "/car/bus32.webp",
-    images: [
-      "/car/bus32.webp",
-    ],
+    mainImage: "/car/bus9.jpeg",
+    images: ["/car/bus9.jpeg", "/car/bus99.jpeg", "/car/bus999.jpeg"],
     wifi: true,
     climateControl: "Automatic Climate Control",
     idealFor: [
