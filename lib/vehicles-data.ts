@@ -190,8 +190,8 @@ export const vehiclesData: VehicleDetails[] = [
     mainImage: "/car/car/Mercedesexecutivestyle.jpeg",
     images: [
       "/car/car/Mercedesexecutivestyle.jpeg",
-      "/car/car/Mercedesexecutivestyle1.jpeg",
-      "/car/car/Mercedesexecutivestyle2.jpeg",
+      "/m1.jpeg",
+      "/m2.jpeg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
@@ -213,8 +213,8 @@ export const vehiclesData: VehicleDetails[] = [
     mainImage: "/car/car/Mercedesexecutivestyle.jpeg",
     images: [
       "/car/car/Mercedesexecutivestyle.jpeg",
-      "/car/car/Mercedesexecutivestyle1.jpeg",
-      "/car//mercedesshuttle.jpeg",
+      "/m4.jpeg",
+      "/m5.jpeg",
     ],
     wifi: true,
     climateControl: "Automatic Climate Control",
